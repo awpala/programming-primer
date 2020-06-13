@@ -123,11 +123,15 @@ Below is a brief survey of a few representative modern, popular general-purpose 
 
 ## E. What Is a Program?
 
-With the preceding discussion regarding the historical context of computation and programming now concluded, it is worthwhile to ask a fundamental question: what is a program, anyways? 
+With the preceding discussion regarding the historical context of computation and programming now concluded, it is worthwhile to ask a fundamental question: what *is* a **program**, anyways? 
 
 A program is simply a set of instructions, i.e., ultimately the machine instructions performed by the computer’s constituent transistor-implemented bits.
 
-The famously titled textbook “Algorithms + Data Structures = Programs” (1976) by computer scientist Niklaus Wirth provides an insightful description of the fundamental essence of a “program.” An algorithm is a precisely specified sequence of instructions (e.g., a step-by-step recipe to prepare a dish). A data structure (e.g., an array) is a organized grouping of information, which is typically manipulated by algorithms to achieve a certain desired result or outcome. A program, then, is simply a collection of data structures and algorithms, which vary in scale and complexity correspondingly to the underlying problem they are intended to solve.
+The famously titled textbook “Algorithms + Data Structures = Programs” (1976) by computer scientist Niklaus Wirth provides an insightful description of the fundamental essence of a “*program*.”
+* An **algorithm** is a precisely specified sequence of instructions (e.g., a step-by-step recipe to prepare a dish).
+* A **data structure** (e.g., an array) is a organized grouping of information, which is typically manipulated by algorithms to achieve a certain desired result or outcome.
+
+A program, then, is simply a collection of data structures and algorithms, which vary in scale and complexity correspondingly to the underlying problem that the program is intended to solve.
 
 Therefore, while the computer hardware is only “aware” of its constituent bits (transistors), it is the programmer-specified data structures stored in its memory and corresponding programmer-specified algorithms performed (computed) by its processor on those data structures which confer “meaning” on those bits—be it bank account information, moving pictures on a screen, text messages, spreadsheets, etc. Indeed, the information stored in and represented by the underlying physical circuitry of any given computational device is only “meaningful” to the human user of that device, by virtue of the programmer’s implementation of the user’s software applications per their (potentially ambiguous) specification.
 
