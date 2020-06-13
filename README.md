@@ -169,6 +169,14 @@ The 1990s and 2000s marked a rapid transformation of globalized society and tech
 
 In the mid-1990s, the general-purpose programming language **Java** was developed by Sun Microsystems to address this issue of cross-compatibility. One of Java’s core tenets was the notion of “*write once, run anywhere*.” To accomplish this, Java was implemented using a runtime environment (the **Java Runtime Environment**, including the **Java Virtual Machine**), which sits on top of each corresponding device’s operating system as a “*virtual computer*” that provides the ability to translate compiled Java source code (called Java **bytecode** in its compiled form) into the machine instructions specific to that particular target computer system. (Bytecode is essentially the “assembly program” run by the “virtual computer,” analogously to an assembly program running on the physical computer’s native binary instruction set.)
 
+A simplified schematic of the Java programming language's implementation is as follows:
+
+<p align="center">
+<img src="https://github.com/awpala/programming-primer/blob/master/images/02-C3-Java.JPG" alt="The Java Runtime Ecosystem")
+ </p>
+
+Here, the source code written by the programmer in Java (`HelloWorld.java`) is first compiled to bytecode (`HelloWorld.class`) by the Java Runtime Environment (JRE), and then deployed to the corresponding target machine/operating system by the Java Virtual Machine (JVM), thereby constituting a cross-platform implementation system. 
+
 Java’s popularity grew quickly during this time, and it has since become deeply rooted in the enterprise software development space. Microsoft released the programming language **C#** (analogously running on top of  the **.NET Framework** runtime environment) in 2000 as a direct competitor to Java, and many other runtime-environment-based programming languages have also emerged since then.
 
 By the mid-to-late 1990s, as the Web became more prevalent and computers continued to become more powerful, the early form of modern **Web applications** began emerging. Up to this point, most programmed applications were developed to run in a native format (e.g., desktop applications) targeted to a specific operating system (e.g., Windows, Mac, Unix, etc.). However, with the interconnectivity provided by the Web, it was apparent that applications could similarly be useful in this growing cross-platform, cross-device landscape.
