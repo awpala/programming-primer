@@ -309,6 +309,10 @@ An abbreviated table of select operators and their precedence is as follows (see
 | 20 | <ul><li>Member Access</li><li>Index Access</li><li>Function Call</li></ul> | L → R | 2 | <ul><li><code>op1.op2</code></li><li><code>op1[op2]</code></li><li><code>op1(op2)</code></li></ul> | <ul><li><code>obj.key;</code></li><li><code>arr[index];</code></li><li><code>f('hello');</code></li></ul> |
 | 18 | <ul><li>Postfix Increment</li><li>Postfix Decrement</li></ul> | L ← R | 1 | <ul><li><code>op1++;</code></li><li><code>op1--;</code></li></ul> | <ul><li><code>i++;</code></li><li><code>j--;</code></li></ul> |
 | 17 | <ul><li>Logical NOT</li><li>Unary Plus</li><li>Unary Negation</li><li><code>delete</code></li></ul> | L ← R | 1 | <ul><li><code>!op1</code></li><li><code>+op1</code></li><li><code>-op1</code></li><li><code>delete op1</code></li></ul> | <ul><li><code>!true;</code></li><li><code>+5;</code></li><li><code>-3;</code></li><li><code>delete obj;</code></li></ul> |
+| 16 | Exponentiation | L ← R | 2 | `op1 ** op2` | `3 ** 4;` |
+| 15 | <ul><li>Multiplication</li><li>Division</li><li>Remainder (Modulo)</li></ul> | L → R | 2 | <ul><li><code>op1 * op2</code></li><li><code>op1 / op2</code></li><li><code>op1 % op2</code></li></ul> |<ul><li><code>2.5 * 3;</code></li><li><code>10 / 7;</code></li><li><code>num % 2;</code></li></ul> |
+| 14 | <ul><li>Addition, Concatenation</li><li>Subtraction</li></ul> | L → R | 2 | <ul><li><code>op1 + op2</code></li><li><code>op1 - op2</code></li></ul> |<ul><li><code>5 + 7;</code></li><li><code>12 - 8;</code></li></ul> |
+| 12 | <ul><li>Less Than</li><li>Less Than or Equal</li><li>Greater Than</li><li>Greater Than or Equal</li><li><code>in</code></li></ul> |  L → R | 2 | <ul><li><code>op1 < op2</code></li><li><code>op1 <= op2</code></li><li><code>op1 > op2</code></li><li><code>op1 >= op2</code></li><li><code>op1 in op2</code></li></ul> | <ul><li><code>3 > 2;</code></li><li><code>3 >= 3;</code></li><li><code>5 < 6;</code></li><li><code>5 <= 5;</code></li><li><code>for (let key in obj);</code></li></ul> |
 
 
 A few illustrative examples demonstrating operator precedence are as follows:
