@@ -71,7 +71,78 @@ Further innovation in integrated-circuit manufacturing technology over the subse
 
 There was still, however, another problem: the process of “programming” these early computational devices required great skill and was highly tedious and error-prone, inasmuch as these machines were directly programmed in the “native” binary language understood by the machines. These early program were typically printed on punch cards or on tape read by the machine, which required intense labor and skill to write even trivial programs.
 
+An [example](http://www.cs.uni.edu/~fienup/cs1410f11/lectures/Supplement_MARE_AL.pdf) "simple" binary program is as follows:
+```
+1010000000000000
+0010000000010000
+0001000000010010
+0011000000010000
+0010000000010001
+1101000000010001
+1000010000000000
+1001000000001001
+1001000000001110
+0110000000000000
+0001000000010000
+0011000000001111
+0010000000010000
+1001000000000010
+0111000000000000
+0000000000000001
+0000000000000000
+0000000000000000
+0000000000010011
+0000000001001000
+0000000001000101
+0000000001001100
+0000000001001100
+0000000001001111
+0000000000001101
+0000000001010111
+0000000001001111
+0000000001010010
+0000000001001100
+0000000001000100
+0000000000000000
+```
+
 A key innovation to address this issue was the development of **assembly languages**, starting in the late 1940s and into the subsequent decades. Assembly languages use mnemonic terms to represent the binary machine instructions and memory addresses of the computer, alleviating the need to explicitly program the computer in its native binary format.
+
+The above binary program example can be represented in [MARIE](http://computerscience.jbpub.com/ecoa/4e/Login.aspx?ref=/ecoa/4e/default.aspx) (a fictitious/academic assembly language for a hypothetical computer architecture, used for pedagogical purposes) as follows:
+```
+		CLEAR
+		STORE INDEX
+WHILE,		LOAD STR_BASE
+		ADD INDEX
+		STORE ADDR
+		LOADI ADDR
+		SKIPCOND 400
+		JUMP DO
+		JUMP END_WHILE
+DO,		OUTPUT
+		LOAD INDEX
+		ADD ONE
+		STORE INDEX
+		JUMP WHILE
+END_WHILE,	HALT
+ONE,		DEC 1
+INDEX,		DEC 0
+ADDR,		HEX 0
+STR_BASE,	HEX 13
+STR,		DEC 72	/H
+		DEC 69	/E
+		DEC 76	/L
+		DEC 76	/L
+		DEC 79	/O
+		DEC 13	/carriage return
+		DEC 87	/W
+		DEC 79	/O
+		DEC 82	/R
+		DEC 76	/L
+		DEC 68	/D
+NULL,		DEC 0	/NULL CHAR
+
+```
 
 ### C-3. Modern Era (1970s to Present)
 
@@ -81,7 +152,14 @@ While a vast improvement over explicit binary programming, assembly languages di
 
 Both of these issues (among others) were ultimately solved with the development of high-level, general-purpose programming languages and their associated compilers in the late 1950s through the 1970s (and to the present day).
 
-A **general-purpose programming language** allows the programmer to specify instructions in a manner that is more reminiscent of natural language (e.g., English), using descriptive terms to perform **operations** (e.g., arithmetic, repetitive loops, etc.) and to denote **data** (e.g., variable declarations), rather than specifying binary machine instructions and binary memory addresses. However, because the computer only understands binary instructions, the **compiler** (itself a specialized program) servers the role of “translator” from the human’s programming language to the computer’s native binary instructions. Compiler implementations are very complicated and even today are still an active area of research in the computer science arena, however, with decades of innovation preceding them, modern compilers can generate machine code that is approximately just as efficient as that created by a skilled human assembly programmer.
+A **general-purpose programming language** allows the programmer to specify instructions in a manner that is more reminiscent of natural language (e.g., English), using descriptive terms to perform **operations** (e.g., arithmetic, repetitive loops, etc.) and to denote **data** (e.g., variable declarations), rather than specifying binary machine instructions and binary memory addresses.
+
+The previous example program can now be (truly) simply written in the general-purpose programming language JavaScript (discussed later) as follows:
+```js
+console.log("HELLO\rWORLD");
+```
+
+However, because the computer only understands binary instructions, the **compiler** (itself a specialized program) servers the role of “translator” from the human’s programming language to the computer’s native binary instructions. Compiler implementations are very complicated and even today are still an active area of research in the computer science arena, however, with decades of innovation preceding them, modern compilers can generate machine code that is approximately just as efficient as that created by a skilled human assembly programmer.
 
 > **Key Point #1**: *The paradigm of transistor-based general-purpose computers, implemented with the von Neumann architecture and running programs written by human programmers in a (more-natural) general-purpose programming language, remains the predominant form of computer programming today.*
 
