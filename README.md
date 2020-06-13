@@ -9,6 +9,7 @@ A brief history of computing and programming, and a general introduction to Java
 * **Key Point #1**: *The paradigm of transistor-based general-purpose computers, implemented with the von Neumann architecture and running programs written by human programmers in a (more-natural) general-purpose programming language, remains the predominant form of computer programming today.*
 * **Key Point #2**: *JavaScript/ECMAScript has come to dominate the Web-application software development arena, and has become a full-fledged, robust general-purpose programming language in its own right since its humble origins as a simple scripting language, all the way through to the present day.*
 * **Key Point #3**: *The role of the programmer is to translate user specifications (e.g., business requirements) into instructions that can be understood by the computer. This is generally done with the assistance of a high-level general-purpose programming language and corresponding development tools (e.g., Integrated Development Environments/IDEs).*
+* > **Key Point #4**: *The assignment operator* `=` *has relatively __low__ operator precedence, as the expression(s) must first be evaluated in order to be assignable to a variable. Furthermore, the grouping operator* `()` *has the __highest__ priority, and is useful for either improving the semantics/readibility of the program, or deliberately increasing the precedence of a given expression (similarly to algebra).*
 
 **!TO-DO**
 
@@ -270,7 +271,45 @@ Additionally, JavaScript provides many additional *non*-primitive data types (e.
 
 ### F-2. Expressions and Statements
 
-**!TO-DO**
+these values, they can be stored in **variables** and used in arbitrary **expressions**.
+
+First, consider the simple **variable assignment** of primitive data types using the assignment operator `=`:
+```js
+let a = 5; // assign number literal 5 to variable a
+a = ‘Hello World’; // re-assign variable a to a string literal ‘Hello World’
+```
+**Variables** provide the ability to “*label*” data in memory, thereby providing a rudimentary data structure. This allows the programmer to work with variable names rather than (binary) memory addresses, greatly increasing productivity of the programmer and the semantics of the program; the JavaScript interpreter will handle the rest (i.e., connecting the label to the binary memory address)!
+
+Additionally, values and variables can be combined and manipulated into **expressions** with the help of **operators** provided by the JavaScript programming language (these operators ultimately map to the machine instructions performed by the processor on the target machine; this, again, is handled “under the hood” by the JavaScript interpreter).
+
+Some representative expressions are as follows:
+```js
+// this is a simple arithmetic expression via the arithmetic + operator
+5 + 5;
+
+// this is a simple concatenation operation via the concatenation + operator, 
+// with the resulting expression (a string, ‘Hello world’) assigned to the variable str
+const str = ‘Hello ‘ + ‘world’; 
+
+// the && (AND) operator evaluates its operands (true and true) and returns a Boolean value (true), 
+//which is assigned to the variable isTrue
+let isTrue = true && true;
+```
+(*N.B. While not in scope of the present discussion, it is important to be mindful of **type coercion** when combining operands using operators. See [MDN]( https://developer.mozilla.org/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Type_conversion) for further reference.*)
+
+When working with operators to create arbitrarily complex expressions in JavaScript, it is important to note the **operator precedence** of a given operator, where an operator can take one, two, or three operands (values and/or expressions), correspondingly referred to as unary, binary, and ternary (respectively) operators.
+
+An abbreviated table of select operators and their precedence is as follows (see [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) for full reference):
+
+**!TO-DO Table**
+
+A few representative examples incorporating operator precedence are as follows:
+
+```js
+// TO-DO: EXAMPLES
+```
+
+> **Key Point #4**: *The assignment operator* `=` *has relatively __low__ operator precedence, as the expression(s) must first be evaluated in order to be assignable to a variable. Furthermore, the grouping operator* `()` *has the __highest__ priority, and is useful for either improving the semantics/readibility of the program, or deliberately increasing the precedence of a given expression (similarly to algebra).*
 
 ### F-3. Control Structures
 
