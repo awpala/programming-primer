@@ -303,12 +303,13 @@ When working with operators to create arbitrarily complex expressions in JavaScr
 
 An abbreviated table of select operators and their precedence is as follows (see [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) for full reference):
 
-**!TO-DO Table**
-
 | Precedence Rank | Operator Type | Associativity | Operand(s) | Notation | Example |
 | :---: | :---: | :---: | :---: | :---: | :---: |
-| 21 (highest) | Grouping | N/A | N/A | `(exp)` | `(1 + 2);` |
+| 21 (*highest*) | Grouping | N/A | N/A | `(exp)` | `(1 + 2);` |
 | 20 | <ul><li>Member Access</li><li>Index Access</li><li>Function Call</li></ul> | L → R | 2 | <ul><li><code>op1.op2</code></li><li><code>op1[op2]</code></li><li><code>op1(op2)</code></li></ul> | <ul><li><code>obj.key;</code></li><li><code>arr[index];</code></li><li><code>f('hello');</code></li></ul> |
+| 18 | <ul><li>Postfix Increment</li><li>Postfix Decrement</li></ul> | L ← R | 1 | <ul><li><code>op1++;</code></li><li><code>op1--;</code></li></ul> | <ul><li><code>i++;</code></li><li><code>j--;</code></li></ul> |
+| 17 | <ul><li>Logical NOT</li><li>Unary Plus</li><li>Unary Negation</li><li><code>delete</code></li></ul> | L ← R | 1 | <ul><li><code>!op1</code></li><li><code>+op1</code></li><li><code>-op1</code></li><li><code>delete op1</code></li></ul> | <ul><li><code>!true;</code></li><li><code>+5;</code></li><li><code>-3;</code></li><li><code>delete obj;</code></li></ul> |
+
 
 A few illustrative examples demonstrating operator precedence are as follows:
 
