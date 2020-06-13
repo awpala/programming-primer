@@ -297,7 +297,7 @@ const str = ‘Hello ‘ + ‘world’;
 //which is assigned to the variable isTrue
 let isTrue = true && true;
 ```
-(*N.B. While not in scope of the present discussion, it is important to be mindful of **type coercion** when combining operands using operators. See [MDN]( https://developer.mozilla.org/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Type_conversion) for further reference.*)
+(*N.B. While not in scope of the present discussion, it is important to be mindful of **type coercion** when combining operands of different data types into expressions using operators. See [MDN]( https://developer.mozilla.org/en-US/docs/Mozilla/js-ctypes/Using_js-ctypes/Type_conversion) for further reference.*)
 
 When working with operators to create arbitrarily complex expressions in JavaScript, it is important to note the **operator precedence** of a given operator, where an operator can take one, two, or three operands (values and/or expressions), correspondingly referred to as unary, binary, and ternary (respectively) operators.
 
