@@ -50,12 +50,16 @@ These implementation difficulties notwithstanding, another important emergent pr
 
 The von Neumann architecture has the following general structure:
 
-**!TO-DO -- FIGURE**
+<p align="center">
+<img src="https://github.com/awpala/programming-primer/blob/master/images/01-C1-vNA.JPG" alt="von Neumann Architecture")
+ </p>
 
-The structure comprises three key components:
+The structure is comprised of three key components:
 * ***Memory*** - the storage area of the computer, which stores data and instructions of the computer program
 * ***Central Processing Unit (CPU), or Processor*** - the “brain” of the computer, which performs computations and reads/writes data and program instructions to/from memory
-* ***Input/Output*** - provides a user the ability to interact with the computer
+* ***Inputs/Outputs*** - provides a user the ability to interact with the computer
+  * ***Inputs*** include keyboard, mouse, audio/video peripherals (e.g., microphones and video cameras), network connectors (inbound), touch devices, etc.
+  * ***Outputs*** include monitors, printers, audio/video peripherals (e.g., speakers), network connectors (outbound), etc.
 
 ### C-2. Middle Era (1940s to 1970s)
 
