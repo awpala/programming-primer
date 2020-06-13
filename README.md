@@ -305,7 +305,12 @@ An abbreviated table of select operators and their precedence is as follows (see
 
 **!TO-DO Table**
 
-A few representative examples incorporating operator precedence are as follows:
+| Precedence Rank | Operator Type | Associativity | Operand(s) | Notation | Example |
+| :---: | :---: | :---: | :---: | :---: | :---: |
+| 21 (highest) | Grouping | N/A | N/A | `(exp)` | `(1 + 2);` |
+| 20 | <ul><li>Member Access</li><li>Index Access</li><li>Function Call</li></ul> | L → R | 2 | <ul><li><code>op1.op2</code></li><li><code>op1[op2]</code></li><li><code>op1(op2)</code></li></ul> | <ul><li><code>obj.key;</code></li><li><code>arr[index];</code></li><li><code>f('hello');</code></li></ul> |
+
+A few illustrative examples demonstrating operator precedence are as follows:
 
 ```js
 // TO-DO: EXAMPLES
