@@ -322,7 +322,7 @@ An abbreviated table of select operators and their precedence is as follows (see
 
 *(N.B. The conditional operator* `?:` *is also called the ternary operator because it is "the" one operator which receives three operands.)* 
 
-The operator rules are listed for each operator with respect to its number of **operands** (where `op1`, `op2`, and `op3`, the operands, in general can be either value or arbitrary expressions) and **associativity** (i.e., left-to-right L → R, or right-to-left L ← R).
+The operator rules are listed for each operator with respect to its number of **operands** (where the operands `op1`, `op2`, and `op3` in general can be either values or arbitrary expressions) and **associativity** (i.e., left-to-right L → R, or right-to-left L ← R).
 
 In general, the JavaScript interpreter reads the JavaScript source code file (e.g., `index.js`) from top-to-bottom, and then evaluates each statement encountered from left to right. Once an operator is encountered, the corresponding operand(s) is/are evaluated and then the operation is performed, returning a resulting value. Operators can be generally chained in this manner (i.e., where the resulting value is passed as an operand to a subsequent operator), giving rise to arbitrarily complex expressions and statements.
 
