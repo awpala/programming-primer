@@ -246,9 +246,27 @@ Therefore, while the computer hardware is only “aware” of its constituent bi
 
 ## F. JavaScript Programming: Fundamental Concepts
 
+This section will review fundamental programming principles, using JavaScript as a representative case study of a modern general-purpose programming language.
+
 ### F-1. Values, Literals, and Data Types
 
-**!TO-DO**
+The atomic unit of any computer program is the **value**, which is represented as binary digits (bits) by the constituent hardware (i.e., transistors) of the computer system on which the program is ultimately run.
+
+The most fundamental level of human semantics provided by the programming language to the computer is the notion of a **data type**. While the computer itself only understands bits (sequences of 1s and 0s), the problem-domain and programmer have a more intuitive notion of useful “*values*.” Accordingly, JavaScript provides several **primitive data types** to represent these values. These primitive data types are as follows:
+
+| Primitive Data Type | Representative Literal(s) | Description |
+| :---: | :---: | :---: |
+| Number | `5`, `3.14` , `NaN` | Represents numbers and used in arithmetic operations |
+| String | `'Hello World'` | Represents text information |
+| Boolean | `true`, `false` | Represents true/false values and used in control structures (discussed later) |
+| Null | `null` | Semantically represents the *deliberate absence* of a value |
+| Undefined | `undefined` | Semantically represents an *unknown/indeterminate* value |
+
+*(N.B. Symbol and BigInt are primitive data types also provided by JavaScript as of ES2019, however, these will not be considered further for purposes of discussion.)*
+
+A common term when referring to a value from a primitive data type is a **literal**. As this terminology suggests, primitive values are “hard-coded” in the programming languages and are unchanging/immutable (e.g., the value 5 is understood to be a numeric integer—it would not make sense to “change” what 5 fundamentally represents in the programming language).
+
+Additionally, JavaScript provides many additional *non*-primitive data types (e.g., objects, arrays, and functions). These provide a more robust feature set for the corresponding values (i.e., to represent more complicated values and data structures for a particular problem), however, this also comes at the expense of implementation and performance overhead. These non-primitive data types will be revisited again later in this section.
 
 ### F-2. Expressions and Statements
 
