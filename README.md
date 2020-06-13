@@ -308,11 +308,12 @@ An abbreviated table of select operators and their precedence is as follows (see
 | 21 (*highest*) | Grouping | N/A | N/A | `(exp)` | `(1 + 2);` |
 | 20 | <ul><li>Member Access</li><li>Index Access</li><li>Function Call</li></ul> | L → R | 2 | <ul><li><code>op1.op2</code></li><li><code>op1[op2]</code></li><li><code>op1(op2)</code></li></ul> | <ul><li><code>obj.key;</code></li><li><code>arr[index];</code></li><li><code>f('hello');</code></li></ul> |
 | 18 | <ul><li>Postfix Increment</li><li>Postfix Decrement</li></ul> | L ← R | 1 | <ul><li><code>op1++;</code></li><li><code>op1--;</code></li></ul> | <ul><li><code>i++;</code></li><li><code>j--;</code></li></ul> |
-| 17 | <ul><li>Logical NOT</li><li>Unary Plus</li><li>Unary Negation</li><li><code>delete</code></li></ul> | L ← R | 1 | <ul><li><code>!op1</code></li><li><code>+op1</code></li><li><code>-op1</code></li><li><code>delete op1</code></li></ul> | <ul><li><code>!true;</code></li><li><code>+5;</code></li><li><code>-3;</code></li><li><code>delete obj;</code></li></ul> |
+| 17 | <ul><li>Logical NOT</li><li>Unary Plus</li><li>Unary Negation</li><li><code>delete</code></li></ul> | L ← R | 1 | <ul><li><code>!op1</code></li><li><code>+op1</code></li><li><code>-op1</code></li><li><code>delete op1</code></li></ul> | <ul><li><code>!true;</code></li><li><code>+5;</code></li><li><code>-3;</code></li><li><code>delete obj.key;</code></li></ul> |
 | 16 | Exponentiation | L ← R | 2 | `op1 ** op2` | `3 ** 4;` |
 | 15 | <ul><li>Multiplication</li><li>Division</li><li>Remainder (Modulo)</li></ul> | L → R | 2 | <ul><li><code>op1 * op2</code></li><li><code>op1 / op2</code></li><li><code>op1 % op2</code></li></ul> |<ul><li><code>2.5 * 3;</code></li><li><code>10 / 7;</code></li><li><code>num % 2;</code></li></ul> |
 | 14 | <ul><li>Addition, Concatenation</li><li>Subtraction</li></ul> | L → R | 2 | <ul><li><code>op1 + op2</code></li><li><code>op1 - op2</code></li></ul> |<ul><li><code>5 + 7;</code></li><li><code>12 - 8;</code></li></ul> |
-| 12 | <ul><li>Less Than</li><li>Less Than or Equal</li><li>Greater Than</li><li>Greater Than or Equal</li><li><code>in</code></li></ul> |  L → R | 2 | <ul><li><code>op1 < op2</code></li><li><code>op1 <= op2</code></li><li><code>op1 > op2</code></li><li><code>op1 >= op2</code></li><li><code>op1 in op2</code></li></ul> | <ul><li><code>3 > 2;</code></li><li><code>3 >= 3;</code></li><li><code>5 < 6;</code></li><li><code>5 <= 5;</code></li><li><code>for (let key in obj);</code></li></ul> |
+| 12 | <ul><li>Less Than</li><li>Less Than or Equal</li><li>Greater Than</li><li>Greater Than or Equal</li><li><code>in</code></li></ul> |  L → R | 2 | <ul><li><code>op1 < op2</code></li><li><code>op1 <= op2</code></li><li><code>op1 > op2</code></li><li><code>op1 >= op2</code></li><li><code>op1 in op2</code></li></ul> | <ul><li><code>3 > 2;</code></li><li><code>3 >= 3;</code></li><li><code>5 < 6;</code></li><li><code>5 <= 5;</code></li><li><code>for (let key in obj);</code></li></ul> 
+| 11 | <ul><li>Equality</li>Inequality<li></li>Strict Equality<li></li><li>Strict Inequality</li></ul> | L → R | 2 | <ul><li><code>op1 == op2</code></li><li><code>op1 != op2</code></li><li><code>op1 === op2</code></li><li><code>op1 !== op2</code></li></ul> | <ul><li><code>3 == '3';</code></li><li><code>2 != '3';</code></li><li><code>3 === 3;</code></li><li><code>2 !== 3;</code></li></ul> |
 
 
 A few illustrative examples demonstrating operator precedence are as follows:
@@ -321,7 +322,10 @@ A few illustrative examples demonstrating operator precedence are as follows:
 // TO-DO: EXAMPLES
 ```
 
+
 > **Key Point #4**: *The assignment operator* `=` *has relatively __low__ operator precedence, as the expression(s) must first be evaluated in order to be assignable to a variable. Furthermore, the grouping operator* `()` *has the __highest__ priority, and is useful for either improving the semantics/readibility of the program, or deliberately increasing the precedence of a given expression (similarly to algebra).*
+
+In practice, most operator precedence rules are intuitive, however, with complicated expressions the precedence table can be referenced to disambiguate the order of operations (this may also be indicative of a candidate expression requiring further refactoring/simplification prior to use). White space and parenthesization additionally can assist with visually promoting greater readability of a complex expression (e.g., in if-else condition clauses, discussed later in this section).
 
 ### F-3. Control Structures
 
