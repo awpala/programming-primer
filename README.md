@@ -9,7 +9,7 @@ A brief history of computing and programming, and a general introduction to Java
 * **Key Point #1**: *The paradigm of transistor-based general-purpose computers, implemented with the von Neumann architecture and running programs written by human programmers in a (more-natural) general-purpose programming language, remains the predominant form of computer programming today.*
 * **Key Point #2**: *JavaScript/ECMAScript has come to dominate the Web-application software development arena, and has become a full-fledged, robust general-purpose programming language in its own right since its humble origins as a simple scripting language, all the way through to the present day.*
 * **Key Point #3**: *The role of the programmer is to translate user specifications (e.g., business requirements) into instructions that can be understood by the computer. This is generally done with the assistance of a high-level general-purpose programming language and corresponding development tools (e.g., Integrated Development Environments/IDEs).*
-* **Key Point #4**: *The assignment operator* `=` *has relatively __low__ operator precedence, as the expression(s) must first be evaluated in order to be assignable to a variable. Furthermore, the grouping operator* `()` *has the __highest__ priority, and is useful for either improving the semantics/readibility of the program, or deliberately increasing the precedence of a given expression (similarly to algebra).*
+* **Key Point #4**: *The assignment operator* `=` *has relatively __low__ operator precedence, as the operand's expression(s) must first be evaluated in order to be assignable to a variable. Furthermore, the grouping operator* `()` *has the __highest__ priority, and is useful for either improving the semantics/readibility of the program, or deliberately increasing the precedence of a given expression (similarly to algebra).*
 
 **!TO-DO**
 
@@ -322,6 +322,9 @@ An abbreviated table of select operators and their precedence is as follows (see
 
 *(N.B. The conditional operator* `?:` *is also called the ternary operator because it is "the" one operator which receives three operands.)* 
 
+The operator rules are listed for each operator with respect to its number of **operands** (where `op1`, `op2`, and `op3`, the operands, in general can be either value or arbitrary expressions) and **associativity** (i.e., left-to-right L → R, or right-to-left L ← R).
+
+In general, the JavaScript interpreter reads the JavaScript source code file (e.g., index.js) from top-to-bottom, and then evaluates each statement encountered from left to right. Once an operator is encountered, the corresponding operand(s) is/are evaluated and then the operation is performed. Operators can be generally chained in this manner, giving rise to arbitrarily complex expressions and statements.
 
 A few illustrative examples demonstrating operator precedence are as follows:
 
@@ -329,10 +332,9 @@ A few illustrative examples demonstrating operator precedence are as follows:
 // TO-DO: EXAMPLES
 ```
 
+> **Key Point #4**: *The assignment operator* `=` *has relatively __low__ operator precedence, as the operand's expression(s) must first be evaluated in order to be assignable to a variable. Furthermore, the grouping operator* `()` *has the __highest__ priority, and is useful for either improving the semantics/readibility of the program, or deliberately increasing the precedence of a given expression (similarly to algebra).*
 
-> **Key Point #4**: *The assignment operator* `=` *has relatively __low__ operator precedence, as the expression(s) must first be evaluated in order to be assignable to a variable. Furthermore, the grouping operator* `()` *has the __highest__ priority, and is useful for either improving the semantics/readibility of the program, or deliberately increasing the precedence of a given expression (similarly to algebra).*
-
-In practice, most operator precedence rules are intuitive, however, with complicated expressions the precedence table can be referenced to disambiguate the order of operations (this may also be indicative of a candidate expression requiring further refactoring/simplification prior to use). White space and parenthesization additionally can assist with visually promoting greater readability of a complex expression (e.g., in if-else condition clauses, discussed later in this section).
+In practice, most operator precedence rules are intuitive, however, when dealing with complicated expressions, the precedence table can be referenced to disambiguate the order of operations (N.B. this may also be indicative of a candidate expression requiring further refactoring/simplification prior to use). **White space** and **parenthesization** additionally can assist with visually promoting greater readability of a complex expression (e.g., in if-else condition clauses, discussed later in this section).
 
 ### F-3. Control Structures
 
