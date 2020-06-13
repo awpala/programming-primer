@@ -271,14 +271,16 @@ Additionally, JavaScript provides many additional *non*-primitive data types (e.
 
 ### F-2. Expressions and Statements
 
-these values, they can be stored in **variables** and used in arbitrary **expressions**.
+Values in isolation are not particularly useful in solving a problem with a computer program. In order to confer *utility* onto these values, they can be stored in **variables** and used in arbitrary **expressions**.
 
 First, consider the simple **variable assignment** of primitive data types using the assignment operator `=`:
 ```js
 let a = 5; // assign number literal 5 to variable a
 a = ‘Hello World’; // re-assign variable a to a string literal ‘Hello World’
 ```
-**Variables** provide the ability to “*label*” data in memory, thereby providing a rudimentary data structure. This allows the programmer to work with variable names rather than (binary) memory addresses, greatly increasing productivity of the programmer and the semantics of the program; the JavaScript interpreter will handle the rest (i.e., connecting the label to the binary memory address)!
+The above code demonstrates the most fundamental unit of a program: the **statement**. Shown above are two statements in succession, written on separate lines, with each statement terminated by a semicolon (`;`). All programs are simply a list of such statements listed in succession, with growing complexity concomitantly with the complexity of the problem the program is solving. As an analogy, if a program were a *book*, the statement would be a *sentence* (composed of *words*, i.e., values and expressions).
+
+Variables provide the ability to “*label*” data in memory, thereby providing a rudimentary data structure. This allows the programmer to work with variable names rather than (binary) memory addresses, greatly increasing productivity of the programmer and the semantics of the program; the JavaScript interpreter will handle the rest (i.e., connecting the label to the binary memory address)!
 
 Additionally, values and variables can be combined and manipulated into **expressions** with the help of **operators** provided by the JavaScript programming language (these operators ultimately map to the machine instructions performed by the processor on the target machine; this, again, is handled “under the hood” by the JavaScript interpreter).
 
