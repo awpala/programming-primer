@@ -215,6 +215,14 @@ With these considerations, when a general-purpose programming language is design
 
 Below is a brief survey of a few representative modern, popular general-purpose programming languages in common use today.
 
+| Programming Language | Creator | Current Specification Developer | Language Specification | Implementation | Representative Application Domain(s) | Comments |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| C | Dennis Ritchie (1970s) | ISO/IEC JTC 1 | ISO/IEC 9899 | compiled (e.g., gcc, Clang) | <ul><li>operating system kernels</li><li>embedded hardware systems</li><li>compilers</li></ul> | Used in high-performance applications, and has more explicit constructs reminiscent of assembly & machine code |
+| C++ | Bjarne Stroustrup (1980s) | ISO/IEC JTC 1 | ISO/IEC 14882 | compiled (e.g., gcc, Clang, MS Visual C++) | <ul><li>high-performance applications (e.g., game engines, real-time audio/video signal processing, etc.)</li><li>embedded hardware systems</li></ul> | Originally developed as an "improvement" (++) to C with the addition of classes, it has since become widespread in hardware systems and influenced later languages such as Java |
+| Java | James Gosling (1990s) | Oracle | The Java® Language Specification | compiled and interpreted via the Java Runtime Environment |  <ul><li>cross-platform desktop applications</li><li>Web applications</li></ul> | Popularized the runtime environment paradigm of application development and deployment, and is still in wide use today |
+| C# | Anders Hejlsberg (2000s) | Microsoft, ISO/IEC, Ecma International | ISO/IEC 23270, ECMA-334 | compiled and interpreted via the .NET Framework & Common Language Runtime (CLR) | <ul><li>cross-platform desktop applications</li><li>Web applications</li></ul> | Developed by Microsoft as a direct competitor to Java, these languages generally compete in similar markets (e.g., enterprise software development) |
+
+
 **!TO-DO -- TABLE**
 
 [:arrow_up_small: Return to top](#overview)
