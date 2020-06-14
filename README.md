@@ -498,9 +498,11 @@ Analogously to a mathematical function, the role of a function is to route input
 As an example of a function definition having a parameter and a `return` value, and its subsequent function call, is as follows:
 ```js
 const name = ‘Matt’;
+
 function greet(name) { // here, “name” is the parameter, used inside the function body
     return `Hello, ${name}`;
 }
+
 console.log(greet(name)); // here, “name” (having value ‘Matt’) is passed as an argument to function greet()
 ```
 
