@@ -512,7 +512,76 @@ Ultimately, as with the other control structures, functions provide another tool
 
 ### F-4. Values vs. References
 
-**!TO-DO**
+*N.B. The diagrams in this section were generated using the [Python tutor JavaScript ES6 visualizer tool](http://www.pythontutor.com/visualize.html#mode=edit), a very useful pedagogical device for visualizing the step-wise operation of the JavaScript source code.*
+
+Having discussed programs, statements, and control structures, discussion can now proceed to more complex subject matter, pertinent to the design of “real-world” applications.
+
+Recall from the beginning of this section that **values** can be generally categorized as primitive vs. non-primitive. As was indicated previously, primitive values are “hard-coded” values in memory and are **immutable** (i.e., unchanging). Consider the following variable declarations of the respective primitive data types:
+```js
+let num = 5;
+let str = 'Hello World';
+let isBoolean = true;
+let nullVal = null;
+let undefVal;
+```
+
+This can be represented diagrammatically in the computer memory as follows:
+<p align="center">
+<img src="https://github.com/awpala/programming-primer/blob/master/images/07-F4-Primitives.JPG" alt="Primitives in memory")
+ </p>
+	
+Conversely, non-primitives are not “hard-coded” in memory in this same manner. The primary non-primitives that will be considered are the **array** and **object**. In the case of arrays and objects, the “value” held by these “data types” is not a “hard-coded value” (as in the case of primitives), but rather a **reference** to a memory location holding the contents of the array or object.
+
+*(N.B. In JavaScript, virtually all non-primitives are modeled as **objects** via **prototypal inheritance** from the global object `Object`. This matter is beyond the scope of present discussion, however, the interested reader is referred to [MDN]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) for elaboration on this topic.)*
+
+Consider the following examples of an array (`arr`) and an object (`obj`):
+```js
+const arr = [1, 2, 3,4];
+
+const obj = {
+    key1: ‘value 1’,
+    key2: ‘value 2’
+}
+```
+
+In memory, these are represented as follows:
+<p align="center">
+<img src="https://github.com/awpala/programming-primer/blob/master/images/08-F4-NonPrimitives.JPG" alt="Non-primitives in memory")
+ </p>
+	
+As per the diagram, the “values” held by the variables `arr` and `obj` are **references** to another location in memory where the corresponding data structure is constructed (this is known as **dynamic memory allocation**). 
+
+Now, consider the following slight modification to the code as follows:
+```js
+const arr = [1, 2, 3, 4];
+
+const obj = {
+    key1: ‘value 1’,
+    key2: arr
+}
+```
+
+The modified diagram is now as follows:
+<p align="center">
+<img src="https://github.com/awpala/programming-primer/blob/master/images/09-F4-arrRef.JPG" alt="arr reference")
+ </p>
+	
+Because `arr`’s reference is now also “labeled” by `obj.key2`, they both refer to the same memory location.
+
+Now, note the result of the following statements and the corresponding diagram:
+```js
+obj.key2[0] = ‘Side effect!’;
+console.log(arr[0]); // ‘Side effect!’
+```
+<p align="center">
+<img src="https://github.com/awpala/programming-primer/blob/master/images/10-F4-SideEffects.JPG" alt="Side effect")
+ </p>
+	
+Observe that modification of `obj.key2[0]`’s value also made the corresponding change to `arr[0]`, due to mutual reference to the same memory location where the values of `arr`'s elements are stored. Thus, arrays (and objects) are **mutable**, i.e., can be changed during program execution. This scheme of “passing by reference” when using non-primitives (e.g., arrays and objects) gives rise to a phenomenon known as **side effects**, whereby a referenced value may cause (potentially unwanted) changes in program which may be difficult to detect in the code.
+
+One may therefore ask: so, why even bother with this *referencing* scheme, rather than simply hard-coding the *values* of non-primitives (e.g., `arr` and `obj`)? This is mainly an implementation optimization: hard-coding the values requires passing *copies of the entire value* (e.g., in function calls, variable assignments, etc.), which can become unwieldy and memory-intensive for arbitrarily complex arrays and objects. This is not an issue with primitives, however, which are implemented by the interpreter in a “light-weight” and efficient/optimized manner, and are therefore “passed by (hard-coded) value” accordingly without issues.
+
+Ultimately, objects and arrays allow to build much more complex data types and data structures from primitives (and other non-primitives, e.g., arrays of objects, objects of objects, objects containing arrays, etc.) in order to represent real-world problems that are meaningful to the programmer and to the problem domain (but ultimately only understood by the machine as 1s and 0s), and hence why they are a staple feature of JavaScript and in other programming languages.
 
 ### F-5. Objects and Methods
 
