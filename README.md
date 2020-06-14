@@ -160,7 +160,7 @@ The previous example program can now be (truly) simply written in the general-pu
 console.log("HELLO\rWORLD");
 ```
 
-However, because the computer only understands binary instructions, the **compiler** (itself a specialized program) servers the role of “translator” from the human’s programming language to the computer’s native binary instructions. Compiler implementations are very complicated and even today are still an active area of research in the computer science arena, however, with decades of innovation preceding them, modern compilers can generate machine code that is approximately just as efficient as that created by a skilled human assembly programmer.
+However, because the computer only understands binary instructions, the **compiler** (itself a specialized program) serves the role of “translator” from the human’s programming language to the computer’s native binary instructions. Compiler implementations are very complicated and even today are still an active area of research in the computer science arena, however, with decades of innovation preceding them, modern compilers can generate machine code from the **source code** (the program written in the general-purpose programming language) that is approximately just as efficient as that created by a skilled human assembly programmer.
 
 > **Key Point #1**: *The paradigm of transistor-based general-purpose computers, implemented with the von Neumann architecture and running programs written by human programmers in a (more-natural) general-purpose programming language, remains the predominant form of computer programming today.*
 
