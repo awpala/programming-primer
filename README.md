@@ -364,9 +364,9 @@ The main constructs provided for this purpose in JavaScript are the `if`/`else` 
 
 The simplest possible conditional construct is a standalone `if` statement. The `if` keyword evaluates an expression (which can be arbitrarily complex) to determine whether it is “truthy” or “falsy.” If “truthy,” then the subsequent statement(s) is/are evaluated, otherwise no action is performed.
 
-In JavaScript, the following values are evaluated as “falsy”:
+In JavaScript, the following values are evaluated as “falsy” (via [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Falsy)):
 
-!TO-DO INSERT TABLE
+`false`, `0`, `-0`, `""` (empty string), `null`, `undefined`, `NaN`
 
 In general, any value that is non-"falsy" is therefore "truthy". Conditional clauses (i.e., in an `if` statement) are typically (arbitrarily complex) *expressions* that evaluate to a Boolean value, however, a single value can also be simply passed and evaluated for its "truthiness" or "falsiness" in this manner.
 
@@ -382,6 +382,7 @@ if (isTrue) {
 // Condition evaluates to false, and the statement is consequently NOT evaluated
 if (!isTrue) {
     console.log(“The if condition has not been met, this statement is not evaluated :(“);
+}
 ```
 
 Additionally, an `else` clause can be paired with a preceding `if` statement to provide routing/selection between the target statements. For example:
