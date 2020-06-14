@@ -426,7 +426,9 @@ if(condition !== 2) {
 ```
 Diagrammatically, the distinction between these two sets of constructs is as follows:
 
-!TO-DO  FIGURE
+<p align="center">
+<img src="https://github.com/awpala/programming-primer/blob/master/images/06-F3-ifelse.JPG" alt="Constructs A and B")
+ </p>
 
 Thus, it is important to be mindful of `if`/`else` pairings and to use brackets `{ … }` and appropriate **indentation** (where applicable) to explicitly denote the intended behavior in such “nested” constructs.
 
