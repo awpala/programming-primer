@@ -338,7 +338,23 @@ In practice, most operator precedence rules are intuitive, however, when dealing
 
 ### F-3. Control Structures
 
-**!TO-DO**
+Up to this point, relatively simple “programs” have been discussed (indeed, a single statement in a source-code file constitutes a valid/”complete” program—albeit a rather trivial one).
+
+In general, a typical program is written as a series of statements in succession, following the logical and thematic organization of the particular problem that it is targeting (e.g., user specifications). Conceptually, this can be modeled diagrammatically as follows:
+
+<p align="center">
+<img src="https://github.com/awpala/programming-primer/blob/master/images/04-F3-ProgramSequence.JPG" alt="A Model of a Program's Sequence")
+ </p>
+
+While it is possible to write fairly complicated programs in this manner, as programs grow in size and complexity, such a “wall” of instructions can quickly become unwieldy from an organizational standpoint.
+
+To assist with this, virtually all modern programming languages (including JavaScript) provide several **control structures** to provide enhanced behavior of the program’s flow from its start to the end of its terminal statement prior to halting execution.
+
+The principal control structures that will be discussed in the following subsections are as follows:
+
+<p align="center">
+<img src="https://github.com/awpala/programming-primer/blob/master/images/05-F3-ControlStructures.JPG" alt="A Model of a Program's Sequence")
+ </p>
 
 #### Conditionals
 
