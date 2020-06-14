@@ -358,7 +358,77 @@ The principal control structures that will be discussed in the following subsect
 
 #### Conditionals
 
-**!TO-DO**
+Conditional statements allow the program to direct/route the instruction sequence on specific conditions; an analogy for this would be a “selector switch” to route the path of electrical or water flow.
+
+The main constructs provided for this purpose in JavaScript are the `if`/`else` construct (and related ternary operator, `? :`), as well as the `switch`/`case` construct. (N.B. For brevity, only `if`/`else` will be considered here for purposes of discussion.)
+
+The simplest possible conditional construct is a standalone `if` statement. The `if` keyword evaluates an expression (which can be arbitrarily complex) to determine whether it is “truthy” or “falsy.” If “truthy,” then the subsequent statement(s) is/are evaluated, otherwise no action is performed.
+
+In JavaScript, the following values are evaluated as “falsy”:
+
+!TO-DO INSERT TABLE
+
+In general, any value that is non-"falsy" is therefore "truthy". Conditional clauses (i.e., in an `if` statement) are typically (arbitrarily complex) *expressions* that evaluate to a Boolean value, however, a single value can also be simply passed and evaluated for its "truthiness" or "falsiness" in this manner.
+
+The following are examples of standalone `if` statements:
+```js
+const isTrue = true;
+
+// Condition evaluates to true, and the statement is consequently evaluated
+if (isTrue) {
+    console.log(“The if condition has been met, this statement is evaluated :)”);
+}
+
+// Condition evaluates to false, and the statement is consequently NOT evaluated
+if (!isTrue) {
+    console.log(“The if condition has not been met, this statement is not evaluated :(“);
+```
+
+Additionally, an `else` clause can be paired with a preceding `if` statement to provide routing/selection between the target statements. For example:
+```js
+const isTrue = true;
+
+if (!isTrue) {
+    console.log(“The if condition has not been met, this statement is not evaluated :(”);
+} else {
+    console.log(“Since the if condition has not been met, this statement is evaluated instead :)“);
+}
+```
+
+These `if`/`else` statements can be further paired/chained to form arbitrarily complex routing of statements. It is a common idiom to write `if` / `else if` / … / `else` blocks for this purpose, as follows:
+```js
+const condition = 2;
+
+// Construct A
+if (condition <= 1) {
+    // condition1
+} else if (condition > 1 && condition < 3) {
+    // condition2
+} else {
+    // condition3a
+}
+```
+
+However, be advised that by default each `else` pairs to its most recently preceding `if` when written in this manner. Hence, note the distinction between the preceding example and the following:
+```js
+const condition = 2;
+
+// Construct B
+if(condition !== 2) {
+    if (condition <= 1) {
+        // condition 1
+    } else {
+        // condition 3b
+    }
+} else if (condition > 1 && condition < 3) {
+    // condition2
+}
+```
+Diagrammatically, the distinction between these two sets of constructs is as follows:
+
+!TO-DO  FIGURE
+
+Thus, it is important to be mindful of `if`/`else` pairings and to use brackets `{ … }` and appropriate **indentation** (where applicable) to explicitly denote the intended behavior in such “nested” constructs.
 
 #### Loops
 
