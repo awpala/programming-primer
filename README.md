@@ -435,7 +435,39 @@ Thus, it is important to be mindful of `if`/`else` pairings and to use brackets 
 
 #### Loops
 
-**!TO-DO**
+Looping/repetition provides the ability to execute a statement multiple times, either for a specified number of **iterations** (e.g., `for` loop) or until a terminal condition is met (e.g., `while` and `do … while` loops). (N.B. This section will restrict focus to the `for` loop construct for the sake of brevity.)
+
+A common use case of the `for` loop is to perform actions on an array, whose iterations correspond to the array’s constituent elements, and within the bounds of its `length` property. (Arrays are discussed in further detail later in this section.)
+
+The `for` loop has the following structure:
+`for(`*start index*` ; `*termination condition*` ; `*increment of iterated variable*`) { … }`
+
+The following is an example of a `for` loop construct:
+```js
+let sum = 0;
+const arr = [1, 2, 3, 4]; // an array
+
+for(let i = 0; i < arr.length; i++)
+{
+    sum += arr[i];
+}
+
+console.log(sum); // 10
+```
+
+This loop construct represents the following:
+
+| `i` | `i < arr.length` | `arr[i]` | value of `sum` after current iteration |
+| :---: | :---: | :---: | :---: |
+| 0 | `true` | 1 | 1 |
+| 1 | `true` | 2 | 3 |
+| 2 | `true` | 3 | 6 |
+| 3 | `true` | 4 | 10 |
+| 4 | `false`| *(loop terminated)* | *(loop terminated)* |
+
+*(N.B. `i`, `j`, and `k` are conventionally used as variable names for iterated indices (e.g., in loops).)*
+
+While out of scope for the present discussion, be advised that the `break`, `continue`, and `return` statements can be used to add further complex routing inside of loop constructs. (See [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration) for more information.)
 
 #### Function Calls
 
