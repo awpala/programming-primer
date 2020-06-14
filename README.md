@@ -471,7 +471,42 @@ While out of scope for the present discussion, be advised that the `break`, `con
 
 #### Function Calls
 
-**!TO-DO**
+A **function** allows to *modularize* a program into specific units/tasks, which helps with organizing the program’s code, particularly when a given task is performed repeatedly, or if a group of statements form a semantically distinct operation.
+
+In general, a function is first **defined**, as in the following example:
+```js
+function simpleTask() {
+    console.log(‘This is a simple function!’);
+}
+```
+
+Once a function is declared, it can then be **invoked** (or **called**) as follows:
+```js
+simpleTask();
+```
+
+Analogously to a mathematical function, the role of a function is to route inputs and outputs. In JavaScript, these are represented by **parameters** and the `return` statement, respectively. However, note that neither parameters nor a `return` statement are required for a function definition to be valid, which in general can have the following forms (using **arrow-function notation** for brevity):
+
+| input↓ \\ output→ | No `return` | Has `return` |
+| :---: | :---: | :---: |
+| **No parameters** | `() => { ...statements... }` | `() => { ...statements... return ...; }` |
+| **Has parameters** | `(params) => { ...statements... }` | `(params) => { ...statements... return ...; }`  |
+
+
+*(N.B. In the function declaration, the inputs are called **parameters**. In the corresponding function invocation/call, the corresponding **arguments** are supplied to the function, which become the parameters used in the function body’s statements.)*
+
+As an example of a function definition having a parameter and a `return` value, and its subsequent function call, is as follows:
+```js
+const name = ‘Matt’;
+function greet(name) { // here, “name” is the parameter, used inside the function body
+    return `Hello, ${name}`;
+}
+console.log(greet(name)); // here, “name” (having value ‘Matt’) is passed as an argument to function greet()
+```
+
+It is common to wonder when/why functions are used. To reiterate the previous point, the purpose of a function is to *modularize the code*. In fact, many operations are so common or otherwise useful that most modern languages (including JavaScript) provide a **standard library** of functions for common tasks. These can be regarded as an exemplar for function design, as they are the product of the collective decades of programming experience by the designers of programming languages and their predecessors. Some of these standard features provided in JavaScript will be discussed later in this section. (See [MDN JavaScript reference]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) for a full catalog of built-in features in JavaScript.)
+
+Ultimately, as with the other control structures, functions provide another tool to the programmer for organizing their code and for modeling real-world, non-trivial problems. The selection (or omission) of input parameter(s) and of a `return` value depends on the intended purpose of the function itself. 
 
 ### F-4. Values vs. References
 
