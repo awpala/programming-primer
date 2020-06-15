@@ -397,14 +397,14 @@ const obj = {
 obj.key1[0][1];
 // Operators: "." (20), "[...]" (20)
 // . and [] are at the same precedence, so this "chained" expression is evaluated in order from left to right...
-// obj.key1 accesses the key "key1" of obj
-// obj.key1[0] accesses element 0 of obj.key1
+// obj.key1 accesses the key "key1" of obj, having value [[1, 2], 3, 4] (an array)
+// obj.key1[0] accesses element 0 of obj.key1, having value [1, 2] (an array)
 // obj.key1[0][1] accesses element 1 of obj.key1[0][1], giving the final value 2
 
 obj.key2.key;
 // Operators: "." (20)
 // As before . are at the same precedence, giving another "chained" expression evaluated left to right...
-// obj.key2 accesses the key "key2" of obj
+// obj.key2 accesses the key "key2" of obj, having value { key: 'value' } (an object)
 // obj.key2.key accesses the value stored in obj.key2.key, giving the final value 'value'
 
 let arr = [4, 5, 6, 7];
@@ -622,7 +622,7 @@ Conversely, non-primitives are not “hard-coded” in memory in this same manne
 
 Consider the following examples of an array (`arr`) and an object (`obj`):
 ```js
-const arr = [1, 2, 3,4];
+const arr = [1, 2, 3, 4];
 
 const obj = {
     key1: ‘value 1’,
