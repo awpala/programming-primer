@@ -704,9 +704,9 @@ The property `length` is accessed as `arr.length` and returns the number of elem
 | Array Method | Description | Parameter(s) | Return Value | MDN Reference |
 | :---: | :---: | :---: | :---: | :---: |
 | `.push()` | Add element(s) to end of `arr` | `element1`*[*`, element2, ..., elementN`*]* | Updated `arr.length` value | [Array.prototype.push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) |
-| `.pop()` | Remove last element from `arr` | (no parameters) | The element removed from `arr` | [Array.prototype.pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) |
-| `.shift()` | | | | |
-| `.unshift()` | | | | |
+| `.pop()` | Remove last element from `arr` | (no parameters) | The element removed from `arr`, or `undefined` if `arr.length === 0` | [Array.prototype.pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) |
+| `.unshift()` | Add element(s) to start of `arr` | `element1`*[*`, element2, ..., elementN`*]* | Updated `arr.length` value | [Array.prototype.unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) |
+| `.shift()` | Remove first element from `arr` | (no parameters) | The element removed from `arr`, or `undefined` if `arr.length === 0` | [Array.prototype.shift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) |
 | `.slice()` | | | | |
 | `.splice()` | | | | |
 | `.find()` | | | | |
