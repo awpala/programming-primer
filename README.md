@@ -712,7 +712,7 @@ The property `length` is accessed as `arr.length` and returns the number of elem
 | `.slice()` | Extract element(s) from `arr` | *[*`start, end`*]* | A new array containing the element(s) extracted from `arr` (`arr` is not changed) | [Array.prototype.slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) |
 | `.splice()` | Remove and/or replace element(s) from/in `arr`  | `start`*[*`, deleteCount, item1, item2, ..., itemN`*]* | A new array containing the removed element(s) (if applicable), or an empty array if no element was removed (`arr` is modified) | [Array.prototype.splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) |
 | `.find()` | Returns the first-encountered value in `arr` | `cb`(`element`*[*`, index, array`*]*)*[*`, thisArg`*]* | The value of the first element found via `cb(...)`, otherwise `undefined` if not found | [Array.prototype.find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) |
-| `.findIndex()` | | | | |
+| `.findIndex()` | Returns index of the first-encountered value in `arr` | `cb`(`element`*[*`, index, array`*]*)*[*`, thisArg`*]* | The index of the value of the first element found via `cb(...)`, otherwise `-1` if not found | [Array.prototype.findIndex()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex) |
 | `.forEach()` | | | | |
 | `.map()` | | | | |
 | `.filter()` | | | | |
