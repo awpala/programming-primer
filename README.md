@@ -531,7 +531,7 @@ The `for` loop has the following structure:
 The following is an example of a `for` loop construct:
 ```js
 let sum = 0;
-const arr = [1, 2, 3, 4]; // an array
+const arr = [1, 2, 3, 4]; // an array with arr.length === 4
 
 for(let i = 0; i < arr.length; i++)
 {
