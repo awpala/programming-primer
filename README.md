@@ -11,7 +11,7 @@ A brief history of computing and programming, and a general introduction to Java
 * **Key Point #3**: *The role of the programmer is to translate user specifications (e.g., business requirements) into instructions that can be understood by the computer. This is generally done with the assistance of a high-level general-purpose programming language and corresponding development tools (e.g., Integrated Development Environments/IDEs).*
 * **Key Point #4**: *The assignment operator* `=` *has relatively __low__ operator precedence, as the operand's expression(s) must first be evaluated in order to be assignable to a variable. Furthermore, the grouping operator* `()` *has the __highest__ priority, and is useful for either improving the semantics/readibility of the program, or deliberately increasing the precedence of a given expression (similarly to algebra).*
 
-**!TO-DO**
+**!TO-DO ADD KEY POINTS**
 
 ## B. Contents
 
@@ -695,9 +695,12 @@ Objects provide the ability to build complex, robust data types to model real-wo
 
 As a first “case study” of this object paradigm, recall the aforementioned **array** data type (itself a specialized object). An abbreviated diagram of a generic array `arr` is as follows (see [MDN]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) for the full reference set of properties and methods of array objects):
 
-**!TO-DO DIAGRAM**
+<p align="center">
+<img src="https://github.com/awpala/programming-primer/blob/master/images/11-F5-arrUML.JPG" alt="pseudo-UML diagram for Array object")
+ </p>
 
-The property `length` is accessed as `arr.length` and returns the number of elements contained in the array `arr`. The methods of `arr` are further described as follows:
+
+The property `length` is accessed as `arr.length` and returns the number of elements contained in the array `arr`. The **methods** of `arr` are further described as follows:
 
 **!TO-DO TABLE**
 
