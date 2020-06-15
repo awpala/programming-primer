@@ -322,6 +322,17 @@ An abbreviated table of select operators and their precedence is as follows (see
 
 *(N.B. The conditional operator* `?:` *is also called the ternary operator because it is "the" one operator which receives three operands.)* 
 
+The logical operators `!` (NOT), `&&` (AND), and `||` (OR), which are used commonly in conditional statements, additionally exhibit the following behavior (commonly called their respective **truth tables**):
+
+| `op1` | `op2` | `!op1` | `op1 && op2` | `op1 \|\| op2` |
+| :---: | :---: | :---: | :---: | :---: |
+| `true` | `true` | `false` | `true` | `true` |
+| `true` | `false` | `false` | `false` | `true` |
+| `false` | `true` | `true` | `false` | `true` |
+| `false` | `false` | `true` | `false` | `false` |
+
+*(N.B. These Boolean operators use an evaluation scheme called **short-circuiting** or **lazy evaluation**. In * `op1 && op2` *, if * `op1` * is * `false` *, this renders the entire expression * `false` * by default and therefore * `op2` *is not evaluated at all. Similarly, in * `op1 || op2` *, if * `op1` * is * `true` *, this renders the entire expression * `true` * by default and therefore * `op2` * is not evaluated at all.)*
+
 The operator rules are listed for each operator with respect to its number of **operands** (where the operands `op1`, `op2`, and `op3` in general can be either values or arbitrary expressions) and **associativity** (i.e., left-to-right L → R, or right-to-left L ← R).
 
 In general, the JavaScript interpreter reads the JavaScript source code file (e.g., `index.js`) from top-to-bottom, and then evaluates each statement encountered from left to right. Once an operator is encountered, the corresponding operand(s) is/are evaluated and then the operation is performed, returning a resulting value. Operators can be generally chained in this manner (i.e., where the resulting value is passed as an operand to a subsequent operator), giving rise to arbitrarily complex expressions and statements.
@@ -329,7 +340,82 @@ In general, the JavaScript interpreter reads the JavaScript source code file (e.
 A few illustrative examples demonstrating operator precedence are as follows:
 
 ```js
-// TO-DO: EXAMPLES
+// 1) Arithmetic expressions behave similarly to traditional algebra
+
+let a = 3 + 2 / 4;
+// Operators (Rank): "=" (3), "+" (14), "/" (15)
+// 2 / 4 is evaluated first, giving 0.5
+// 3 + 0.5 is evaluated, giving 3.5
+// 3.5 is assigned to a
+
+a = (3 + 2) / 4;
+// Operators: "(...)" (1), "+" (14), "/" (15)
+// (...) increases the precedence of the expression 3 + 2, which is evaluated first to give 5
+// 5 / 4 is evaluated, giving 1.25
+// 1.25 is assigned to a
+
+a = 3 ** 2 ** 2;
+// Operators: "=" (3), "**" (16)
+// ** is evaluated right-to-left, but since both are at the same precedence, the left expression is evaluated first...
+// 3 ** 2 is evaluated, giving 9
+// 9 ** 2 is evaluated, giving 27
+// 27 is assigned to a
+
+// 2) Boolean expressions are often used in if-else statements to form complex expressions (if-else statements are discussed later)
+
+if(!false || true && true && !false || false) {
+    // statement(s) to evaluate if condition evaluates to "true"
+}
+// In order to evaluate the conditional expression provided to the if clause, it must be evaluated (i.e., simplified to a Boolean)
+// Operators: ! (17), || (5), && (6)
+// ! has the highest precedence, so the Boolean expression first simplifies as follows...
+// true || true && true && !false || false
+// true || true && true && true || false
+// && has the next-highest precedence, so the expression further simplifies as follows...
+// true || true && true || false
+// true || true || false
+// || has the lowest precedence, so the expression is finally simplified as follows...
+// true || false
+// true
+
+(!false
+    || (true && true && !false) 
+    || false
+ );
+// The conditional expression show above is equivalent to the previous one, but is made more readable 
+// with parenthesization and indentation
+
+// 3) Access of array indices and object members can also involve complex expressions (arrays and objects are discussed later)
+
+const obj = {
+    key1: [[1, 2], 3, 4],
+    key2: {
+            key: 'value'
+	  }
+}
+
+obj.key1[0][1];
+// Operators: "." (20), "[...]" (20)
+// . and [] are at the same precedence, so this "chained" expression is evaluated in order from left to right...
+// obj.key1 accesses the key "key1" of obj
+// obj.key1[0] accesses element 0 of obj.key1
+// obj.key1[0][1] accesses element 1 of obj.key1[0][1], giving the final value 2
+
+obj.key2.key;
+// Operators: "." (20)
+// As before . are at the same precedence, giving another "chained" expression evaluated left to right...
+// obj.key2 accesses the key "key2" of obj
+// obj.key2.key accesses the value stored in obj.key2.key, giving the final value 'value'
+
+let arr = [4, 5, 6, 7];
+
+arr[arr.length - 1];
+// Operators: "[...]" (20), "." (20), "-" (14)
+// This statement has the form op1[op2];. Since op2 is an expression, it must first be evaluated/simplified
+// in order to determine the index to access...
+// arr.length evaluates to 4
+// 4 - 1 evaluates to 3
+// Therefore, arr[3] gives the final value 7
 ```
 
 > **Key Point #4**: *The assignment operator* `=` *has relatively __low__ operator precedence, as the operand's expression(s) must first be evaluated in order to be assignable to a variable. Furthermore, the grouping operator* `()` *has the __highest__ priority, and is useful for either improving the semantics/readibility of the program, or deliberately increasing the precedence of a given expression (similarly to algebra).*
