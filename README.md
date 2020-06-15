@@ -699,10 +699,28 @@ As a first “case study” of this object paradigm, recall the aforementioned *
 <img src="https://github.com/awpala/programming-primer/blob/master/images/11-F5-arrUML.JPG" alt="pseudo-UML diagram for Array object")
  </p>
 
-
 The property `length` is accessed as `arr.length` and returns the number of elements contained in the array `arr`. The **methods** of `arr` are further described as follows:
 
-**!TO-DO TABLE**
+| Array Method | Description | Parameter(s) | Return Value | MDN Reference |
+| :---: | :---: | :---: | :---: | :---: |
+| `.push()` | | | | |
+| `.pop()` | | | | |
+| `.shift()` | | | | |
+| `.unshift()` | | | | |
+| `.slice()` | | | | |
+| `.splice()` | | | | |
+| `.find()` | | | | |
+| `.findIndex()` | | | | |
+| `.forEach()` | | | | |
+| `.map()` | | | | |
+| `.filter()` | | | | |
+| `.reduce()` | | | | |
+
+Some examples of using these array methods are as follows:
+
+```js
+// TO-DO: CODE EXAMPLES
+```
 
 **!TO-DO FINISH SECTION**
 
