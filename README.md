@@ -322,7 +322,9 @@ An abbreviated table of select operators and their precedence is as follows (see
 
 *(N.B. The conditional operator* `?:` *is also called the ternary operator because it is "the" one operator which receives three operands.)* 
 
-The logical operators `!` (NOT), `&&` (AND), and `||` (OR), which are used commonly in conditional statements, additionally exhibit the following behavior (commonly called their respective **truth tables**):
+The operator rules are listed for each operator with respect to its number of **operands** (where the operands `op1`, `op2`, and `op3` in general can be either values or arbitrary expressions) and **associativity** (i.e., left-to-right L → R, or right-to-left L ← R).
+
+For reference, the logical operators `!` (NOT), `&&` (AND), and `||` (OR), which are used commonly in conditional statements, exhibit the following behavior (commonly called their respective **truth tables**):
 
 | `op1` | `op2` | `!op1` | `op1 && op2` | `op1 \|\| op2` |
 | :---: | :---: | :---: | :---: | :---: |
@@ -333,9 +335,7 @@ The logical operators `!` (NOT), `&&` (AND), and `||` (OR), which are used commo
 
 *(N.B. These Boolean operators use an evaluation scheme called **short-circuiting** or **lazy evaluation**. In* `op1 && op2` *, if* `op1` *is* `false` *, this renders the entire expression* `false` *by default and therefore* `op2` *is not evaluated at all. Similarly, in* `op1 || op2` *, if* `op1` *is* `true` *, this renders the entire expression* `true` *by default and therefore* `op2` *is not evaluated at all.)*
 
-The operator rules are listed for each operator with respect to its number of **operands** (where the operands `op1`, `op2`, and `op3` in general can be either values or arbitrary expressions) and **associativity** (i.e., left-to-right L → R, or right-to-left L ← R).
-
-In general, the JavaScript interpreter reads the JavaScript source code file (e.g., `index.js`) from top-to-bottom, and then evaluates each statement encountered from left to right. Once an operator is encountered, the corresponding operand(s) is/are evaluated and then the operation is performed, returning a resulting value. Operators can be generally chained in this manner (i.e., where the resulting value is passed as an operand to a subsequent operator), giving rise to arbitrarily complex expressions and statements.
+In general, the JavaScript interpreter reads the JavaScript source code file (e.g., `index.js`) from top-to-bottom, and then evaluates each statement encountered from left to right (or right-to-left for the corresponding operators with R ← L associativity). Once an operator is encountered, the corresponding operand(s) is/are evaluated and then the operation is performed, returning a resulting value. Operators can be generally chained in this manner (i.e., where the resulting value is passed as an operand to a subsequent operator), giving rise to arbitrarily complex expressions and statements.
 
 A few illustrative examples demonstrating operator precedence are as follows:
 
