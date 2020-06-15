@@ -312,7 +312,7 @@ An abbreviated table of select operators and their precedence is as follows (see
 | 16 | Exponentiation | L ← R | 2 | `op1 ** op2` | `3 ** 4;` |
 | 15 | <ul><li>Multiplication</li><li>Division</li><li>Remainder (Modulo)</li></ul> | L → R | 2 | <ul><li><code>op1 * op2</code></li><li><code>op1 / op2</code></li><li><code>op1 % op2</code></li></ul> |<ul><li><code>2.5 * 3;</code></li><li><code>10 / 7;</code></li><li><code>num % 2;</code></li></ul> |
 | 14 | <ul><li>Addition, Concatenation</li><li>Subtraction</li></ul> | L → R | 2 | <ul><li><code>op1 + op2</code></li><li><code>op1 - op2</code></li></ul> |<ul><li><code>5 + 7;</code></li><li><code>12 - 8;</code></li></ul> |
-| 12 | <ul><li>Less Than</li><li>Less Than or Equal</li><li>Greater Than</li><li>Greater Than or Equal</li><li><code>in</code></li></ul> |  L → R | 2 | <ul><li><code>op1 < op2</code></li><li><code>op1 <= op2</code></li><li><code>op1 > op2</code></li><li><code>op1 >= op2</code></li><li><code>op1 in op2</code></li></ul> | <ul><li><code>5 < 6;</code></li><li><code>5 <= 5;</code></li><li><code>3 > 2;</code></li><li><code>3 <= 3;</code></li><li><code>for (let key in obj);</code></li></ul> 
+| 12 | <ul><li>Less Than</li><li>Less Than or Equal</li><li>Greater Than</li><li>Greater Than or Equal</li><li><code>in</code></li></ul> |  L → R | 2 | <ul><li><code>op1 < op2</code></li><li><code>op1 <= op2</code></li><li><code>op1 > op2</code></li><li><code>op1 >= op2</code></li><li><code>op1 in op2</code></li></ul> | <ul><li><code>5 < 6;</code></li><li><code>5 <= 5;</code></li><li><code>3 > 2;</code></li><li><code>3 >= 3;</code></li><li><code>for (let key in obj);</code></li></ul> 
 | 11 | <ul><li>Equality</li><li>Inequality</li><li>Strict Equality</li><li>Strict Inequality</li></ul> | L → R | 2 | <ul><li><code>op1 == op2</code></li><li><code>op1 != op2</code></li><li><code>op1 === op2</code></li><li><code>op1 !== op2</code></li></ul> | <ul><li><code>3 == '3';</code></li><li><code>2 != '3';</code></li><li><code>3 === 3;</code></li><li><code>2 !== 3;</code></li></ul> |
 | 6 | Logical AND | L → R | 2 | `op1 && op2` | `true && true;` |
 | 5 | Logical OR | L → R | 2 | `op1 \|\| op2` | `true \|\| false;` | 
@@ -320,7 +320,7 @@ An abbreviated table of select operators and their precedence is as follows (see
 | 3 | Assignment | L ← R | 2 | <ul><li><code>op1 = op2</code></li><li><code>op1 **= op2</code></li><li><code>op1 *= op2</code></li><li><code>op1 /= op2</code></li><li><code>op1 %= op2</code></li><li><code>op1 += op2</code></li><li><code>op1 -= op2</code></li></ul> | <ul><li><code>a = 3;</code></li><li><code>a **= 3;</code></li><li><code>a *= 3;</code></li><li><code>a /= 3;</code></li><li><code>a %= 3;</code></li><li><code>a += 3;</code></li><li><code>a -= 3;</code></li></ul> |
 | 1 (*lowest*) | Comma/Sequence | L → R | 2 | `op1 , op2` | `[1 , 2];` |
 
-*(N.B. The conditional operator* `?:` *is also called the ternary operator because it is "the" one operator which receives three operands.)* 
+*(N.B. The conditional operator* `?:` *is also called the **ternary** operator because it is "the" one operator which receives **three** operands.)* 
 
 The operator rules are listed for each operator with respect to its number of **operands** (where the operands `op1`, `op2`, and `op3` in general can be either values or arbitrary expressions) and **associativity** (i.e., left-to-right L → R, or right-to-left L ← R).
 
