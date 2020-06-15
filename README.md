@@ -687,7 +687,7 @@ In general, **objects** are comprised of two “components”:
 * **properties** - attributes of the object 
 * **methods** - functions performed by and/or on the object
 
-These “components” are often referred to as **members** of the object. A common notation/formalism involving objects (i.e., accessing an object's members) is `object.attribute` and `object.method(…)`.
+These “components” are often referred to as **members** of the object. A common notation/formalism involving objects (i.e., accessing an object's members) is `object.property` and `object.method(…)`.
 
 *(N.B. This formalism was popularized in the 1980s with the wide-spread proliferation of the **object-oriented programming** paradigm, which remains the predominant programming paradigm for modern software development today.)*
 
@@ -697,7 +697,7 @@ As a first “case study” of this object paradigm, recall the aforementioned *
 
 **!TO-DO DIAGRAM**
 
-The attribute `length` is accessed as `arr.length` and returns the number of elements contained in the array `arr`. The methods of `arr` are further described as follows:
+The property `length` is accessed as `arr.length` and returns the number of elements contained in the array `arr`. The methods of `arr` are further described as follows:
 
 **!TO-DO TABLE**
 
