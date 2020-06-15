@@ -681,7 +681,27 @@ Ultimately, objects and arrays allow to build much more complex data types and d
 
 ### F-5. Objects and Methods
 
-**!TO-DO**
+As a final topic of discussion, the concept of objects will be further considered.
+
+In general, **objects** are comprised of two “components”:
+* **properties** - attributes of the object 
+* **methods** - functions performed by and/or on the object
+
+These “components” are often referred to as **members** of the object. A common notation/formalism involving objects (i.e., accessing an object's members) is `object.attribute` and `object.method(…)`.
+
+*(N.B. This formalism was popularized in the 1980s with the wide-spread proliferation of the **object-oriented programming** paradigm, which remains the predominant programming paradigm for modern software development today.)*
+
+Objects provide the ability to build complex, robust data types to model real-world problems. It allows to “package” an object into a semantic unit of properties (attributes) and methods (functions) particular to the instantiated objects (i.e., variables) of that particular object type.
+
+As a first “case study” of this object paradigm, recall the aforementioned **array** data type (itself a specialized object). An abbreviated diagram of a generic array `arr` is as follows (see [MDN]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) for the full reference set of properties and methods of array objects):
+
+**!TO-DO DIAGRAM**
+
+The attribute `length` is accessed as `arr.length` and returns the number of elements contained in the array `arr`. The methods of `arr` are further described as follows:
+
+**!TO-DO TABLE**
+
+**!TO-DO FINISH SECTION**
 
 [:arrow_up_small: Return to top](#overview)
 
