@@ -331,7 +331,7 @@ The logical operators `!` (NOT), `&&` (AND), and `||` (OR), which are used commo
 | `false` | `true` | `true` | `false` | `true` |
 | `false` | `false` | `true` | `false` | `false` |
 
-*(N.B. These Boolean operators use an evaluation scheme called **short-circuiting** or **lazy evaluation**. In * `op1 && op2` *, if * `op1` * is * `false` *, this renders the entire expression * `false` * by default and therefore * `op2` *is not evaluated at all. Similarly, in * `op1 || op2` *, if * `op1` * is * `true` *, this renders the entire expression * `true` * by default and therefore * `op2` * is not evaluated at all.)*
+*(N.B. These Boolean operators use an evaluation scheme called **short-circuiting** or **lazy evaluation**. In* `op1 && op2` *, if* `op1` *is* `false` *, this renders the entire expression* `false` *by default and therefore* `op2` *is not evaluated at all. Similarly, in* `op1 || op2` *, if* `op1` *is* `true` *, this renders the entire expression* `true` *by default and therefore * `op2` *is not evaluated at all.)*
 
 The operator rules are listed for each operator with respect to its number of **operands** (where the operands `op1`, `op2`, and `op3` in general can be either values or arbitrary expressions) and **associativity** (i.e., left-to-right L → R, or right-to-left L ← R).
 
