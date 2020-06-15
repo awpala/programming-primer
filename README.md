@@ -356,10 +356,10 @@ a = (3 + 2) / 4;
 
 a = 3 ** 2 ** 2;
 // Operators: "=" (3), "**" (16)
-// ** is evaluated right-to-left, but since both are at the same precedence, the left expression is evaluated first...
-// 3 ** 2 is evaluated, giving 9
-// 9 ** 2 is evaluated, giving 27
-// 27 is assigned to a
+// ** has a right-to-left associativity, and since both are at the same precedence, the right expression is evaluated first...
+// 2 ** 2 is evaluated, giving 4
+// 3 ** 4 is evaluated, giving 81
+// 81 is assigned to a
 
 // 2) Boolean expressions are often used in if-else statements to form complex expressions (if-else statements are discussed later)
 
