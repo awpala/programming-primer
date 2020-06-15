@@ -699,6 +699,8 @@ As a first “case study” of this object paradigm, recall the aforementioned *
 <img src="https://github.com/awpala/programming-primer/blob/master/images/11-F5-arrUML.JPG" alt="pseudo-UML diagram for Array object")
  </p>
 
+*(N.B. Methods are used like functions and have similar behavior, i.e., they can receive input **parameters**, which correspond to the arguments passed via an analogous **method call*** `arr.method(arg(s));` *, and can also return a value. A method is essentially a "specialized function" that belongs to the object, e.g.,* `arr` *.)*
+
 The property `length` is accessed as `arr.length` and returns the number of elements contained in the array `arr`. The **methods** of `arr` are further described as follows:
 
 | Array Method | Description | Parameter(s) | Return Value | MDN Reference |
@@ -707,8 +709,8 @@ The property `length` is accessed as `arr.length` and returns the number of elem
 | `.pop()` | Remove last element from `arr` | (no parameters) | The element removed from `arr`, or `undefined` if `arr.length === 0` | [Array.prototype.pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) |
 | `.unshift()` | Add element(s) to start of `arr` | `element1`*[*`, element2, ..., elementN`*]* | Updated `arr.length` value | [Array.prototype.unshift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift) |
 | `.shift()` | Remove first element from `arr` | (no parameters) | The element removed from `arr`, or `undefined` if `arr.length === 0` | [Array.prototype.shift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) |
-| `.slice()` | | | | |
-| `.splice()` | | | | |
+| `.slice()` | Extract element(s) from `arr` | *[*`start, end`*]* | A new array containing the element(s) extracted from `arr` (`arr` is not changed) | [Array.prototype.slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) |
+| `.splice()` | Remove and/or replace element(s) from/in `arr`  | `start`*[*`, deleteCount, item1, item2, ..., itemN`*]* | A new array containing the removed element(s) (if applicable), or an empty array if no element was removed (`arr` is modified) | [Array.prototype.splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) |
 | `.find()` | | | | |
 | `.findIndex()` | | | | |
 | `.forEach()` | | | | |
