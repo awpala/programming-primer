@@ -703,8 +703,8 @@ The property `length` is accessed as `arr.length` and returns the number of elem
 
 | Array Method | Description | Parameter(s) | Return Value | MDN Reference |
 | :---: | :---: | :---: | :---: | :---: |
-| `.push()` | | | | |
-| `.pop()` | | | | |
+| `.push()` | Add element(s) to end of `arr` | `element1`*[*`, element2, ..., elementN`*]* | Updated `arr.length` value | [Array.prototype.push()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push) |
+| `.pop()` | Remove last element from `arr` | (no parameters) | The element removed from `arr` | [Array.prototype.pop()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop) |
 | `.shift()` | | | | |
 | `.unshift()` | | | | |
 | `.slice()` | | | | |
@@ -715,6 +715,8 @@ The property `length` is accessed as `arr.length` and returns the number of elem
 | `.map()` | | | | |
 | `.filter()` | | | | |
 | `.reduce()` | | | | |
+
+*(N.B. In the table above, ***optional parameters** are indicated with* [...] *, and* `cb` *denotes an arbitrary **callback function**.)*
 
 Some examples of using these array methods are as follows:
 
