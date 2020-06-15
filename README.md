@@ -711,14 +711,14 @@ The property `length` is accessed as `arr.length` and returns the number of elem
 | `.shift()` | Remove first element from `arr` | (no parameters) | The element removed from `arr`, or `undefined` if `arr.length === 0` | [Array.prototype.shift()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift) |
 | `.slice()` | Extract element(s) from `arr` | *[*`start, end`*]* | A new array containing the element(s) extracted from `arr` (`arr` is not changed) | [Array.prototype.slice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) |
 | `.splice()` | Remove and/or replace element(s) from/in `arr`  | `start`*[*`, deleteCount, item1, item2, ..., itemN`*]* | A new array containing the removed element(s) (if applicable), or an empty array if no element was removed (`arr` is modified) | [Array.prototype.splice()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice) |
-| `.find()` | | | | |
+| `.find()` | Returns the first-encountered value in `arr` | `cb`(`element`*[*`, index, array`*]*)*[*`, thisArg`*]* | The value of the first element found via `cb(...)`, otherwise `undefined` if not found | [Array.prototype.find()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find) |
 | `.findIndex()` | | | | |
 | `.forEach()` | | | | |
 | `.map()` | | | | |
 | `.filter()` | | | | |
 | `.reduce()` | | | | |
 
-*(N.B. In the table above, ***optional parameters** are indicated with* [...] *, and* `cb` *denotes an arbitrary **callback function**.)*
+*(N.B. In the table above, ***optional parameters** are indicated with* [...] *, and* `cb`(`...`) *denotes an arbitrary **callback function**.)*
 
 Some examples of using these array methods are as follows:
 
