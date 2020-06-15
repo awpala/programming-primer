@@ -340,7 +340,9 @@ In general, the JavaScript interpreter reads the JavaScript source code file (e.
 A few illustrative examples demonstrating operator precedence are as follows:
 
 ```js
-// 1) Arithmetic expressions behave similarly to traditional algebra
+/* 
+1) Arithmetic expressions behave similarly to traditional algebra
+*/
 
 let a = 3 + 2 / 4;
 // Operators (Rank): "=" (3), "+" (14), "/" (15)
@@ -356,17 +358,22 @@ a = (3 + 2) / 4;
 
 a = 3 ** 2 ** 2;
 // Operators: "=" (3), "**" (16)
-// ** has a right-to-left associativity, and since both are at the same precedence, the right expression is evaluated first...
+// ** has a right-to-left associativity, and since both are at the same precedence, the right expression
+// is evaluated first...
 // 2 ** 2 is evaluated, giving 4
 // 3 ** 4 is evaluated, giving 81
 // 81 is assigned to a
 
-// 2) Boolean expressions are often used in if-else statements to form complex expressions (if-else statements are discussed later)
+/*
+2) Boolean expressions are often used in if-else statements to form complex expressions
+    (if-else statements are discussed later)
+*/
 
 if(!false || true && true && !false || false) {
     // statement(s) to evaluate if condition evaluates to "true"
 }
-// In order to evaluate the conditional expression provided to the if clause, it must be evaluated (i.e., simplified to a Boolean)
+// In order to evaluate the conditional expression provided to the if clause, it must be
+// evaluated (i.e., simplified to a Boolean)
 // Operators: ! (17), || (5), && (6)
 // ! has the highest precedence, so the Boolean expression first simplifies as follows...
 // true || true && true && !false || false
@@ -385,7 +392,10 @@ if(!false || true && true && !false || false) {
 // The conditional expression show above is equivalent to the previous one, but is made more readable 
 // with parenthesization and indentation
 
-// 3) Access of array indices and object members can also involve complex expressions (arrays and objects are discussed later)
+/*
+3) Access of array indices and object members can also involve complex expressions
+    (arrays and objects are discussed later)
+*/
 
 const obj = {
     key1: [[1, 2], 3, 4],
