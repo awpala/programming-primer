@@ -653,7 +653,7 @@ const arr = [1, 2, 3, 4];
 
 const obj = {
     key1: ‘value 1’,
-    key2: arr
+    key2: arr // change value from 'value2' to arr
 }
 ```
 
