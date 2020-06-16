@@ -725,8 +725,34 @@ Some examples of using these array methods are as follows:
 ```js
 // TO-DO: CODE EXAMPLES
 ```
+In the case of array objects, there can be arbitrarily many such (independent) array objects in a given program, called **instances**, each having their own corresponding `length` property and methods (e.g., `.pop()`, `.map()`, etc.). Such properties and methods are therefore called **instance properties** and **instance methods**. Conceptually, these object instances “live” independently in the program as long as they are in scope:
 
-**!TO-DO FINISH SECTION**
+**!TO-DO FIGURE**
+
+Note that JavaScript also provides **wrapper objects** to convert primitives into corresponding objects with associated properties and methods (e.g., `.toString()`, `.valueOf()`, `.parseInt()`, `.isNaN()`, etc.)---i.e., `String`, `Number`, `BigInt`, `Boolean`, and `Symbol` (`null` and `undefined` do not have corresponding wrappers). The primitives are still implemented (i.e., rather than using these wrapper-object representations by default), however, for the aforementioned performance reasons (recall Section F-4). See [MDN]( https://developer.mozilla.org/en-US/docs/Glossary/Primitive#Primitive_wrapper_objects_in_JavaScript) for further discussion regarding primitive wrapper objects.
+
+Additionally, the JavaScript runtime environment also provides several useful **objects** that are accessible in the **global scope** of a program. While a comprehensive review of these objects is beyond the scope of discussion, consider the `Math` object as a representative “case study.” The `Math` object can be represented by the following abbreviated diagram (see [MDN]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) for full reference of the `Math` object):
+
+**!TO-DO FIGURE**
+
+A few illustrative examples of using the `Math` object are as follows:
+
+```js
+// TO-DO: CODE EXAMPLES
+```
+As a point of additional note, recall the aforementioned array object’s `length` property and various methods (e.g., `.pop()`, `.splice()`, etc.) were specific to each individual *instance* of an instantiated array object, and are correspondingly referred to as **instance properties** and **instance methods**, respectively. Conversely, there is only a *single* `Math` object provided in the global scope by the JavaScript runtime environment (e.g., the property `Math.E` represents the mathematical constant *e*, Euler's number). Thus, rather than instantiating *multiple* instances, the *single* `Math` object is used directly in expressions, with its members being accessed correspondingly as `Math.property` and `Math.method()`. The properties and methods of the `Math` object are therefore denoted **static properties** and **static methods** (respectively) to distinguish this accordingly.
+
+*(N.B. See [MDN]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects) for the full reference list of available built-in objects in the global scope.)*
+
+Another “object” of note is the `console` object, which is similarly provided by the JavaScript runtime environment (via API) and accessible in the global scope, providing the corresponding familiar method `console.log()` (among others; see [MDN]( https://developer.mozilla.org/en-US/docs/Web/API/console) for full reference of the `console` object).
+
+As a final point of discussion, consider the **Document Object Model (DOM)**, which is a hierarchical representation of a Web page's structural content. Recall that the primary application domain of JavaScript is the development of Web software applications. Accordingly, the DOM provides an **interface** with which JavaScript can interact with the content of a Web page and confer functionality on it.
+
+*(N.B. The DOM is not formally specified in the ECMAScript language specification, however, the DOM is largely [standardized](https://dom.spec.whatwg.org/) across Web browsers to promote the portability of Web applications. Accordingly, the corresponding browser-implemented JavaScript runtime environments provide a **[Web API](https://developer.mozilla.org/en-US/docs/Web/API)** to allow for interaction with the Web page content (including the DOM) via JavaScript, thereby enabling the ability to create functional Web applications.)*
+
+In JavaScript (i.e., via the Web API), the DOM is modeled as an object called `document`, having corresponding properties and methods.
+
+**!TO-DO FINISH DOM CONTENT**
 
 [:arrow_up_small: Return to top](#overview)
 
