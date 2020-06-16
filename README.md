@@ -718,7 +718,7 @@ The property `length` is accessed as `arr.length` and returns the number of elem
 | `.filter()` | Filters `arr` on a condition to a new array | `cb`(`element`*[*`, index, array`*]*)*[*`, thisArg`*]* | The new array, as filtered by `cb(...)`, or an empty array if all elements fail the test in `cb(...)` (`arr` is not changed) | [Array.prototype.filter()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) |
 | `.reduce()` | Reduces `arr` to a new single value | `cb`(`accumulator, currentValue`*[*`, currentIndex, array`*]*)*[*`, initialValue`*]* | The new value, as reduced by `cb(...)` (`arr` is not changed) | [Array.prototype.reduce()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce) |
 
-*(N.B. In the table above, ***optional parameters** are indicated with* [...] *, and* `cb`(`...`) *denotes an arbitrary **callback function**.)*
+*(N.B. In the table above, **optional parameters** are indicated with* [...] *, and* `cb`(`...`) *denotes an arbitrary **callback function**.)*
 
 Some examples of using these array methods are as follows:
 
