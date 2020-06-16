@@ -628,7 +628,7 @@ This can be represented diagrammatically in the computer memory as follows:
 	
 Conversely, non-primitives are not “hard-coded” in memory in this same manner. The primary non-primitives that will be considered are the **array** and **object**. In the case of arrays and objects, the “value” held by these “data types” is not a “hard-coded value” (as in the case of primitives), but rather a **reference** to a memory location holding the contents of the array or object.
 
-*(N.B. In JavaScript, virtually all non-primitives are modeled as **objects** via **prototypal inheritance** from the global object `Object`. This matter is beyond the scope of present discussion, however, the interested reader is referred to [MDN]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) for elaboration on this topic.)*
+*(N.B. In JavaScript, virtually all non-primitives are modeled as **objects** via **prototypal inheritance** from the global object* `Object`*. This matter is beyond the scope of present discussion, however, the interested reader is referred to [MDN]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain) for elaboration on this topic.)*
 
 Consider the following examples of an array (`arr`) and an object (`obj`):
 ```js
