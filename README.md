@@ -263,7 +263,7 @@ The most fundamental level of human semantics provided by the programming langua
 | Null | `null` | Semantically represents the *deliberate absence/omission* of a value |
 | Undefined | `undefined` | Semantically represents an *unknown/indeterminate* value |
 
-*(N.B. Symbol and BigInt are primitive data types also provided by JavaScript as of ES2019, however, these will not be considered further for purposes of discussion. See [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures) for further discussion of primitive values.)*
+*(N.B. Symbol and BigInt are primitive data types also provided by JavaScript as of ES2020, however, these will not be considered further for purposes of discussion. See [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures) for further discussion of primitive values.)*
 
 A common term when referring to a value from a primitive data type is a **literal**. As this terminology suggests, primitive values are “hard-coded” in the programming languages and are unchanging/**immutable** (e.g., the value 5 is understood to be a numeric integer—it would not make sense to “*change*” what 5 fundamentally represents in the programming language).
 
