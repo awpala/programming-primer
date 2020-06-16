@@ -645,7 +645,7 @@ In memory, these are represented as follows:
 <img src="https://github.com/awpala/programming-primer/blob/master/images/08-F4-NonPrimitives.JPG" alt="Non-primitives in memory")
  </p>
 	
-As per the diagram, the “values” held by the variables `arr` and `obj` are **references** to another location in memory where the corresponding data structure is constructed (this is known as **dynamic memory allocation**). 
+As per the diagram, the “values” held by the variables `arr` and `obj` are **references** to another location in memory where the corresponding data structure is constructed (this is known as **dynamic memory allocation**; see [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management) for more information regarding memory management by the JavaScript runtime). 
 
 Now, consider the following slight modification to the code as follows:
 ```js
