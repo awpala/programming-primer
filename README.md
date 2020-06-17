@@ -770,7 +770,9 @@ Note that JavaScript also provides **wrapper objects** to convert primitives int
 
 Additionally, the JavaScript runtime environment also provides several useful **objects** that are accessible in the **global scope** of a program. While a comprehensive review of these objects is beyond the scope of discussion, consider the `Math` object as a representative “case study.” The `Math` object can be represented by the following abbreviated diagram (see [MDN]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) for full reference of the `Math` object):
 
-**!TO-DO FIGURE**
+<p align="center">
+<img src="https://github.com/awpala/programming-primer/blob/master/images/12-F5-MathUML.JPG" alt="pseudo-UML diagram for Math object")
+ </p>
 
 A few illustrative examples of using the `Math` object are as follows:
 
