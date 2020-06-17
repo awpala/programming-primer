@@ -249,6 +249,12 @@ Therefore, while the computer hardware is only “aware” of its constituent bi
 
 This section will review fundamental programming principles, using JavaScript as a representative case study of a modern general-purpose programming language.
 
+The following is a "roadmap" of Section F, intended to provide a "mental model" for conceptualizing the hierarchical structure of the programming process.
+
+<p align="center">
+<img src="https://github.com/awpala/programming-primer/blob/master/images/00-01-F0-Roadmap.JPG" alt="Section F Roadmap")
+ </p>
+
 ### F-1. Values, Literals, and Data Types
 
 The atomic unit of any computer program is the **value**, which is represented as binary digits (bits) by the constituent hardware (i.e., transistors) of the computer system on which the program is ultimately run.
