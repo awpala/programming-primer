@@ -686,6 +686,8 @@ Ultimately, objects and arrays allow to build much more complex data types and d
 
 ### F-5. Objects and Methods
 
+#### Objects Overview
+
 As a final topic of discussion, the concept of objects will be further considered.
 
 In general, **objects** are comprised of two “components”:
@@ -697,6 +699,8 @@ These “components” are often referred to as **members** of the object. A com
 *(N.B. This formalism was popularized in the 1980s with the wide-spread proliferation of the **object-oriented programming** paradigm, which remains the predominant programming paradigm for modern software development today.)*
 
 Objects provide the ability to build complex, robust data types to model real-world problems. It allows to “package” an object into a semantic unit of properties (attributes) and methods (functions) particular to the instantiated objects (i.e., variables) of that particular object type.
+
+#### The Array Object
 
 As a first “case study” of this object paradigm, recall the aforementioned **array** data type (itself a specialized object). An abbreviated diagram of a generic array `arr` is as follows (see [MDN]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) for the full reference set of properties and methods of array objects):
 
@@ -734,7 +738,11 @@ In the case of array objects, there can be arbitrarily many such (independent) a
 
 **!TO-DO FIGURE**
 
+#### ***Aside***: Wrapper Objects
+
 Note that JavaScript also provides **wrapper objects** to convert primitives into corresponding objects with associated properties and methods (e.g., `.toString()`, `.valueOf()`, `.parseInt()`, `.isNaN()`, etc.)---i.e., `String`, `Number`, `BigInt`, `Boolean`, and `Symbol` (`null` and `undefined` do not have corresponding wrappers). The primitives are still implemented (i.e., rather than using these wrapper-object representations by default), however, for the aforementioned performance reasons (recall Section F-4). See [MDN]( https://developer.mozilla.org/en-US/docs/Glossary/Primitive#Primitive_wrapper_objects_in_JavaScript) for further discussion regarding primitive wrapper objects.
+
+#### Objects in the Global Scope
 
 Additionally, the JavaScript runtime environment also provides several useful **objects** that are accessible in the **global scope** of a program. While a comprehensive review of these objects is beyond the scope of discussion, consider the `Math` object as a representative “case study.” The `Math` object can be represented by the following abbreviated diagram (see [MDN]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) for full reference of the `Math` object):
 
@@ -745,11 +753,18 @@ A few illustrative examples of using the `Math` object are as follows:
 ```js
 // TO-DO: CODE EXAMPLES
 ```
-As a point of additional note, recall the aforementioned array object’s `length` property and various methods (e.g., `.pop()`, `.splice()`, etc.) were specific to each individual *instance* of an instantiated array object, and are correspondingly referred to as **instance properties** and **instance methods**, respectively. Conversely, there is only a *single* `Math` object provided in the global scope by the JavaScript runtime environment (e.g., the property `Math.E` represents the mathematical constant *e*, Euler's number). Thus, rather than instantiating *multiple* instances, the *single* `Math` object is used directly in expressions, with its members being accessed correspondingly as `Math.property` and `Math.method()`. The properties and methods of the `Math` object are therefore denoted **static properties** and **static methods** (respectively) to distinguish this accordingly.
 
 *(N.B. See [MDN]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects) for the full reference list of available built-in objects in the global scope.)*
 
+#### ***Aside***: Instance Objects vs. Static Objects
+
+As a point of additional note, recall the aforementioned array object’s `length` property and various methods (e.g., `.pop()`, `.splice()`, etc.) were specific to each individual *instance* of an instantiated array object, and are correspondingly referred to as **instance properties** and **instance methods**, respectively. Conversely, there is only a *single* `Math` object provided in the global scope by the JavaScript runtime environment (e.g., the property `Math.E` represents the mathematical constant *e*, Euler's number). Thus, rather than instantiating *multiple* instances, the *single* `Math` object is used directly in expressions, with its members being accessed correspondingly as `Math.property` and `Math.method()`. The properties and methods of the `Math` object are therefore denoted **static properties** and **static methods** (respectively) to distinguish this accordingly.
+
+#### The `console` Object
+
 Another “object” of note is the `console` object, which is similarly provided by the JavaScript runtime environment (via API) and accessible in the global scope, providing the corresponding familiar method `console.log()` (among others; see [MDN]( https://developer.mozilla.org/en-US/docs/Web/API/console) for full reference of the `console` object).
+
+#### The Document Object Model (DOM)
 
 As a final point of discussion, consider the **Document Object Model (DOM)**, which is a hierarchical representation of a Web page's structural content. Recall that the primary application domain of JavaScript is the development of Web software applications. Accordingly, the DOM provides an **interface** with which JavaScript can interact with the content of a Web page and confer functionality on it.
 
