@@ -24,12 +24,24 @@ A brief history of computing and programming, and a general introduction to Java
 * F. JavaScript Programming: Fundamental Concepts
   * F-1. Values, Literals, and Data Types
   * F-2. Expressions and Statements
+    * Variables and Identifiers
+    * Operators and Expressions
+    * Operator Precedence
+    * ***Aside***: Logical Operators
+    * Operator Precedence Examples
   * F-3. Control Structures
     * Conditionals
     * Loops
     * Function Calls
   * F-4. Values vs. References
   * F-5. Objects and Methods
+    * Objects Overview
+    * The Array Object
+    * ***Aside***: Wrapper Objects
+    * Objects in the Global Scope
+    * ***Aside***: Instance Objects vs. Static Objects
+    * The `console` Object
+    * The Document Object Model (DOM)
 * G. JavaScript Programming: A Guided Example
 * H. Program Errors
 * I. Key Takeaways
@@ -277,6 +289,8 @@ Additionally, JavaScript provides many additional *non*-primitive data types (e.
 
 ### F-2. Expressions and Statements
 
+#### Variables, Identifiers, and Keywords
+
 Values in isolation are not particularly useful in solving a problem with a computer program. In order to confer *utility* onto these values, they can be stored in **variables** and used in arbitrary **expressions**.
 
 First, consider the simple **variable assignment** of primitive data types using the assignment operator `=`:
@@ -287,6 +301,10 @@ a = ‘Hello World’; // re-assign variable a to a string literal ‘Hello Worl
 The above code demonstrates the most fundamental unit of a program: the **statement**. Shown above are two statements in succession, written on separate lines, with each statement terminated by a semicolon (`;`). All programs are simply a list of such statements listed in succession, with growing complexity concomitantly with the complexity of the problem the program is solving. As an analogy, if a program were a *book*, the statement would be a *sentence* (composed of *words*, i.e., values and expressions).
 
 Variables provide the ability to “*label*” data in memory, thereby providing a rudimentary data structure. This allows the programmer to work with variable names rather than (binary) memory addresses, greatly increasing productivity of the programmer and the semantics of the program; the JavaScript interpreter will handle the rest (i.e., connecting the label to the binary memory address)!
+
+**!TO-DO: Add identifiers & keywords content**
+
+#### Operators and Expressions
 
 Additionally, values and variables can be combined and manipulated into **expressions** with the help of **operators** provided by the JavaScript programming language (these operators ultimately map to the machine instructions performed by the processor on the target machine; this, again, is handled “under the hood” by the JavaScript interpreter).
 
@@ -304,6 +322,8 @@ const str = ‘Hello ‘ + ‘world’;
 let isTrue = true && true;
 ```
 (*N.B. While not in scope of the present discussion, it is important to be mindful of **type coercion** when combining operands of different data types into expressions using operators. See [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) for further reference.*)
+
+#### Operator Precedence
 
 When working with operators to create arbitrarily complex expressions in JavaScript, it is important to note the **operator precedence** of a given operator, where an operator can take one, two, or three operands (values and/or expressions), correspondingly referred to as unary, binary, and ternary (respectively) operators.
 
@@ -330,6 +350,8 @@ An abbreviated table of select operators and their precedence is as follows (see
 
 The operator rules are listed for each operator with respect to its number of **operands** (where the operands `op1`, `op2`, and `op3` in general can be either values or arbitrary expressions) and **associativity** (i.e., left-to-right L → R, or right-to-left L ← R).
 
+#### ***Aside***: Logical Operators
+
 For reference, the logical operators `!` (NOT), `&&` (AND), and `||` (OR), which are used commonly in conditional statements, exhibit the following behavior (commonly called their respective **truth tables**):
 
 | `op1` | `op2` | `!op1` | `op1 && op2` | `op1 \|\| op2` |
@@ -340,6 +362,8 @@ For reference, the logical operators `!` (NOT), `&&` (AND), and `||` (OR), which
 | `false` | `false` | `true` | `false` | `false` |
 
 *(N.B. These Boolean operators use an evaluation scheme called **short-circuiting** or **lazy evaluation**. In* `op1 && op2` *, if* `op1` *is* `false` *, this renders the entire expression* `false` *by default and therefore* `op2` *is not evaluated at all. Similarly, in* `op1 || op2` *, if* `op1` *is* `true` *, this renders the entire expression* `true` *by default and therefore* `op2` *is not evaluated at all.)*
+
+#### Operator Precedence Examples
 
 In general, the JavaScript interpreter reads the JavaScript source code file (e.g., `index.js`) from top-to-bottom, and then evaluates each statement encountered from left to right (or right-to-left for the corresponding operators with L ← R associativity). Once an operator is encountered, the corresponding operand(s) is/are evaluated and then the operation is performed, returning a resulting value. Operators can be generally chained in this manner (i.e., where the resulting value is passed as an operand to a subsequent operator), giving rise to arbitrarily complex expressions and statements.
 
