@@ -17,8 +17,15 @@ A brief history of computing and programming, and a general introduction to Java
 
 * C. A Brief History of Modern Computing and Programming
   * C-1. Early Era (1800s to 1940s)
+    * The First Computers
+    * The von Neumann Architecture
   * C-2. Middle Era (1940s to 1970s)
+    * The Transistor
+    * Assembly Languages
   * C-3. Modern Era (1970s to Present)
+    * General-Purpose Programming Languages and Their Compilers
+    * Computer Networking and Cross-Compatibility Issues
+    * JavaScript and Web Applications
 * D. The Perfect Language Doesn't Exist :(
 * E. What Is a Program?
 * F. JavaScript Programming: Fundamental Concepts
@@ -51,6 +58,8 @@ A brief history of computing and programming, and a general introduction to Java
 
 ### C-1. Early Era (1800s to 1940s)
 
+#### The First Computers
+
 Computation has a long, rich history, but its modern form originated approximately in the mid-1800s, with Charles Babbage’s conception of the **Analytic Engine**, a mechanical device which (in principle) would behave similarly to what would now be recognized as a general-purpose computer.
 
 Through the turn of the 20th century, several other important developments had been independently discovered, including the formalization of key mathematical logic constructs by George Boole (a body of work now known eponymously as Boolean algebra). This continued progression of events up through the 1920s and 1930s culminated in the work of Alan Turing and his contemporaries. Turing’s seminal paper “*On Computable Numbers, with An Application to the Entscheidungsproblem*” (1936) formalized the modern notion of “**computation**”; a corollary of this monumental paper was the ability to precisely specify what is now known as a **general-purpose computer**.
@@ -58,6 +67,8 @@ Through the turn of the 20th century, several other important developments had b
 Building on Turing’s work, and as part of the War effort, the first predecessors of the modern-day computer were conceived and built in the 1940s. The **ENIAC** is generally regarded as the first stored-program, general-purpose computer to have been built using electronic components (outcompeting its electro-mechanical, electro-magnetic, and other contemporaries); the ENIAC was effectively the first physical manifestation of Babbage’s Analytic Engine, conceived almost a whole century prior to that point.
 
 These early machines were multi-ton in weight—occupying entire rooms—and had very limited memory and comparatively slow computational speed by modern standards. Furthermore, the binary (i.e., 1/0, or on/off) “language” understood by these machines was programmed using bulky components such as mechanical relays and vacuum tubes, which had performance issues and were susceptible to malfunction.
+
+#### The von Neumann Architecture
 
 These implementation difficulties notwithstanding, another important emergent property of these early computers was their fundamental design: the **von Neumann architecture**. This design (conceived by the mathematical prodigy John von Neumann and his colleagues) formed the basis of all modern computational devices—including the computers, smartphones, etc. in widespread use today.
 
@@ -76,11 +87,15 @@ The structure is comprised of three key components:
 
 ### C-2. Middle Era (1940s to 1970s)
 
+#### The Transistor
+
 With the groundwork set by these early machines, several problems arose.
 
 There was an obvious impracticality of such large, unwieldy devices which precluded any large-scale manufacture and adoption. A final critical piece was introduced to these nascent “proto-computers” with the invention of the **transistor** in the 1950s. The transistor is an electronic device which can behave as an “on/off” switch, and is a solid-state device having no moving/mechanical parts, thereby lending well to its stable, reliable operation. As the manufacturing process of transistors improved over time, the transistor was subsequently incorporated into computational devices to represent the fundamental **binary digit** (or **bit**), which underlies all computer hardware. The bit constitutes the simplest possible representation of data in computation: either on, or off. From this fundamental operation, larger, more complex structures such as digital logic gates (based on Boolean algebra) could be built, which ultimately hierarchically form into the full general-purpose computer.
 
 Further innovation in integrated-circuit manufacturing technology over the subsequent decades propelled the transistor into a role of great prominence, as well as sparking the “second westward gold rush” of what eventually would become known today as *Silicon Valley*. The transistor was critically important in increasing the density of computational power and memory into increasingly smaller physical space (ultimately allowing for the mass production of consumer electronic devices), and it is widely regarded as one of—if not ***the***—most important inventions of the 20th century accordingly.
+
+#### Assembly Languages
 
 There was still, however, another problem: the process of “programming” these early computational devices required great skill and was highly tedious and error-prone, inasmuch as these machines were directly programmed in the “native” binary language understood by the machines. These early program were typically printed on punch cards or on tape read by the machine, which required intense labor and skill to write even trivial programs.
 
@@ -159,6 +174,8 @@ NULL,		DEC 0	/NULL CHAR
 
 ### C-3. Modern Era (1970s to Present)
 
+#### General-Purpose Programming Languages and Their Compilers
+
 While a vast improvement over explicit binary programming, assembly languages did not address several issues which were inherent in writing programs at the time, two of which are of particular note.
 * Firstly, assembly languages lack **portability**. A given program written in a given machine’s **instruction set** (the binary instructions understood by that particular machine) were not directly portable/transferable to another machine—the program would have to be entirely rewritten all over in the new machine’s instruction set in order to execute the same program on the latter machine.
 * Secondly, writing programs in assembly languages still subjected the programmer to solve problems within the constraints of the machine’s own instructions, rather than solving problems within the constraints of the problem domain itself and in a more natural, human-comprehensible manner.
@@ -176,6 +193,8 @@ However, because the computer only understands binary instructions, the **compil
 
 > **Key Point #1**: *The paradigm of transistor-based general-purpose computers, implemented with the von Neumann architecture and running programs written by human programmers in a (more-natural) general-purpose programming language, remains the predominant form of computer programming today.*
 
+#### Computer Networking and Cross-Compatibility Issues
+
 Another key innovation was the development of computer **networking** (i.e., connecting computers into larger, integrated systems), ultimately resulting in the formation of the **Internet** in the 1980s and the **World Wide Web** in the early 1990s. (The profound impact of these technologies is readily self-apparent.)
 
 The 1990s and 2000s marked a rapid transformation of globalized society and technology, including the proliferation of many wide-ranging computational devices and consumer appliances. Accordingly, one of the emerging challenges during this time was cross-compatibility of programs and software across these devices (a challenge that still remains today!).
@@ -191,6 +210,8 @@ A simplified schematic of the Java programming language's implementation is as f
 Here, the source code written by the programmer in Java (`HelloWorld.java`) is first compiled to bytecode (`HelloWorld.class`) by the Java Runtime Environment (JRE), and then deployed to the corresponding target machine/operating system by the Java Virtual Machine (JVM), thereby constituting a cross-platform implementation system. 
 
 Java’s popularity grew quickly during this time, and it has since become deeply rooted in the enterprise software development space. Microsoft released the programming language **C#** (analogously running on top of  the **.NET Framework** runtime environment) in 2000 as a direct competitor to Java, and many other runtime-environment-based programming languages have also emerged since then.
+
+#### JavaScript and Web Applications
 
 By the mid-to-late 1990s, as the Web became more prevalent and computers continued to become more powerful, the early form of modern **Web applications** began emerging. Up to this point, most programmed applications were developed to run in a native format (e.g., desktop applications) targeted to a specific operating system (e.g., Windows, Mac, Unix, etc.). However, with the interconnectivity provided by the Web, it was apparent that applications could similarly be useful in this growing cross-platform, cross-device landscape.
 
