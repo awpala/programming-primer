@@ -363,7 +363,7 @@ An abbreviated table of select operators and their precedence is as follows (see
 | 11 | <ul><li>Equality</li><li>Inequality</li><li>Strict Equality</li><li>Strict Inequality</li></ul> | L → R | 2 | <ul><li><code>op1 == op2</code></li><li><code>op1 != op2</code></li><li><code>op1 === op2</code></li><li><code>op1 !== op2</code></li></ul> | <ul><li><code>3 == '3';</code></li><li><code>2 != '3';</code></li><li><code>3 === 3;</code></li><li><code>2 !== 3;</code></li></ul> |
 | 6 | Logical AND | L → R | 2 | `op1 && op2` | `true && true;` |
 | 5 | Logical OR | L → R | 2 | `op1 \|\| op2` | `true \|\| false;` | 
-| 4 | The Conditional (Ternary) Operator | L ← R2 ← R1 | 3 | `op1 ? op2 : op3` | `1 === 1 ? 'true' : 'false';` | 
+| 4 | The Conditional (Ternary) Operator | L ← R | 3 | `op1 ? op2 : op3` | `1 === 1 ? 'true' : 'false';` | 
 | 3 | Assignment | L ← R | 2 | <ul><li><code>op1 = op2</code></li><li><code>op1 **= op2</code></li><li><code>op1 *= op2</code></li><li><code>op1 /= op2</code></li><li><code>op1 %= op2</code></li><li><code>op1 += op2</code></li><li><code>op1 -= op2</code></li></ul> | <ul><li><code>a = 3;</code></li><li><code>a **= 3;</code></li><li><code>a *= 3;</code></li><li><code>a /= 3;</code></li><li><code>a %= 3;</code></li><li><code>a += 3;</code></li><li><code>a -= 3;</code></li></ul> |
 | 1 (*lowest*) | Comma/Sequence | L → R | 2 | `op1 , op2` | `[1 , 2];` |
 
