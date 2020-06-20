@@ -789,6 +789,8 @@ In the case of array objects, there can be arbitrarily many such (independent) a
 
 Note that JavaScript also provides **wrapper objects** to convert primitives into corresponding objects with associated properties and methods (e.g., `.toString()`, `.valueOf()`, `.parseInt()`, `.isNaN()`, etc.)---i.e., `String`, `Number`, `BigInt`, `Boolean`, and `Symbol` (`null` and `undefined` do not have corresponding wrappers). The primitives are still implemented (i.e., rather than using these wrapper-object representations by default), however, for the aforementioned performance reasons (recall Section F-4). See [MDN]( https://developer.mozilla.org/en-US/docs/Glossary/Primitive#Primitive_wrapper_objects_in_JavaScript) for further discussion regarding primitive wrapper objects.
 
+**!TO-DO Add String object content**
+
 #### Objects in the Global Scope
 
 Additionally, the JavaScript runtime environment also provides several useful **objects** that are accessible in the **global scope** of a program. While a comprehensive review of these objects is beyond the scope of discussion, consider the `Math` object as a representative “case study.” The `Math` object can be represented by the following abbreviated diagram (see [MDN]( https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math) for full reference of the `Math` object):
