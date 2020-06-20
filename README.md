@@ -388,6 +388,8 @@ For reference, the logical operators `!` (NOT), `&&` (AND), and `||` (OR), which
 
 In general, the JavaScript interpreter reads the JavaScript source code file (e.g., `index.js`) from top-to-bottom, and then evaluates each statement encountered from left to right (or right-to-left for the corresponding operators with L ← R associativity). Once an operator is encountered, the corresponding operand(s) is/are evaluated and then the operation is performed, returning a resulting value. Operators can be generally chained in this manner (i.e., where the resulting value is passed as an operand to a subsequent operator), giving rise to arbitrarily complex expressions and statements.
 
+*(N.B. See [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar) for a more thorough coverage of the lexical analysis of statements performed by the JavaScript interpreter.)*
+
 A few illustrative examples demonstrating operator precedence are as follows:
 
 ```js
