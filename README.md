@@ -377,11 +377,10 @@ These operators can be further categorized as follows (with precedence rank indi
 | :---: | :---: | :---: | :---: |
 | Miscellaneous | `f(...)` (20), `,` (1) | `++` (18), `--` (18), `?:` (4) | (Various) |
 | Object Membership | `.` (20), `[...]` (20), `in` (12) | `delete` (17) | Member access and/or modification |
-| Variable Assignment | | `=` (3), `**=` (3), `*=` (3), `/=` (3), `%=` (3), `+=` (3), `-=` (3) | Assign and/or update variable's stored value |
 | Boolean/Logical | `&&` (6), `\|\|` (5) | `!` (17) | Returns a Boolean value |
 | Arithmetic | `*` (15), `/` (15), `%` (15), `+` (14), `-` (14) | `+` (17), `-` (17), `**` (16) | Returns a numeric value |
 | Comparison | `<` (12), `<=` (12), `>` (12), `>=` (12), `==` (11), `!=` (11), `===` (11), `!==` (11) | | Returns a Boolean value |
-
+| Variable Assignment | | `=` (3), `**=` (3), `*=` (3), `/=` (3), `%=` (3), `+=` (3), `-=` (3) | Assign and/or update variable's stored value |
 
 #### ***Aside***: Logical Operators
 
