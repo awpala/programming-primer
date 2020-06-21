@@ -757,7 +757,7 @@ As a first “case study” of this object paradigm, recall the aforementioned *
 
 *(N.B. Methods are used like functions and have similar behavior, i.e., they can receive input **parameters**, which correspond to the arguments passed via an analogous **method call*** `arr.method(arg(s));` *, and can also return a value. A method is essentially a "specialized function" that belongs to the object, e.g.,* `arr` *.)*
 
-The property `length` is accessed as `arr.length` and returns the number of elements contained in the array `arr`. The **methods** of `arr` are further described as follows:
+The `length` property is accessed as `arr.length` and stores the current number of elements contained in the array `arr`. The **methods** of `arr` are further described as follows:
 
 | Array Method | Description | Parameter(s) | Return Value | MDN Reference |
 | :---: | :---: | :---: | :---: | :---: |
