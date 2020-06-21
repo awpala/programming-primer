@@ -371,14 +371,14 @@ An abbreviated table of select operators and their precedence is as follows (see
 
 The operator rules are listed for each operator with respect to its number of **operands** (where the operands `op1`, `op2`, and `op3` in general can be either values or arbitrary expressions) and **associativity** (i.e., left-to-right L → R, or right-to-left L ← R). Associativity is the order/direction in which operations are performed when two (or more) operators of equal precedence occur in a statement.
 
-These operators can be further categorized as follows (with precedence rank indicated in parentheses):
+These operators can be further categorized as follows (with precedence rank indicated in parentheses; furthermore, with respect to the operands count, ^ denotes unary operators, ^^^ denotes the ternary operator, and all others are binary operators):
 
 | Operation | L → R Associative Operators | L ← R Associative Operators | Result of Operation |
 | :---: | :---: | :---: | :---: |
-| Miscellaneous | `f(...)` (20), `,` (1) | `++` (18), `--` (18), `?:` (4) | (Various) |
-| Object Membership | `.` (20), `[...]` (20), `in` (12) | `delete` (17) | Member access and/or modification |
-| Boolean/Logical | `&&` (6), `\|\|` (5) | `!` (17) | Returns a Boolean value |
-| Arithmetic | `*` (15), `/` (15), `%` (15), `+` (14), `-` (14) | `+` (17), `-` (17), `**` (16) | Returns a numeric value |
+| Miscellaneous | `f(...)` (20), `,` (1) | `++` (18^), `--` (18^), `?:` (4^^^) | (Various) |
+| Object Membership | `.` (20), `[...]` (20), `in` (12) | `delete` (17^) | Member access and/or modification |
+| Boolean/Logical | `&&` (6), `\|\|` (5) | `!` (17^) | Returns a Boolean value |
+| Arithmetic | `*` (15), `/` (15), `%` (15), `+` (14), `-` (14) | `+` (17^), `-` (17^), `**` (16) | Returns a numeric value |
 | Comparison | `<` (12), `<=` (12), `>` (12), `>=` (12), `==` (11), `!=` (11), `===` (11), `!==` (11) | | Returns a Boolean value |
 | Variable Assignment | | `=` (3), `**=` (3), `*=` (3), `/=` (3), `%=` (3), `+=` (3), `-=` (3) | Assign and/or update variable's stored value |
 
