@@ -369,7 +369,7 @@ An abbreviated table of select operators and their precedence is as follows (see
 
 *(N.B. The conditional operator* `?:` *is also called the **ternary** operator because it is "the" one operator which receives **three** operands.)* 
 
-The operator rules are listed for each operator with respect to its number of **operands** (where the operands `op1`, `op2`, and `op3` in general can be either values or arbitrary expressions) and **associativity** (i.e., left-to-right L → R, or right-to-left L ← R).
+The operator rules are listed for each operator with respect to its number of **operands** (where the operands `op1`, `op2`, and `op3` in general can be either values or arbitrary expressions) and **associativity** (i.e., left-to-right L → R, or right-to-left L ← R). Associativity is the order/direction in which operations are performed when two (or more) operators of equal precedence occur in a statement.
 
 These operators can be further categorized as follows (with precedence rank indicated in parentheses):
 
