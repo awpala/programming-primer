@@ -323,7 +323,28 @@ The above code demonstrates the most fundamental unit of a program: the **statem
 
 Variables provide the ability to “*label*” data in memory, thereby providing a rudimentary data structure. This allows the programmer to work with variable names rather than (binary) memory addresses, greatly increasing productivity of the programmer and the semantics of the program; the JavaScript interpreter will handle the rest (i.e., connecting the label to the binary memory address)!
 
-**!TO-DO: Add identifiers & keywords content**
+The formal term for such a "label" is called an **identifer**. There are certain restrictions imposed by the JavaScript interpreter with respect to ***valid*** identifiers. Per [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Identifier):
+
+> *An **identifier** is a sequence of characters in the code that identifies a variable, function, or property. In JavaScript, identifiers are **case-sensitive** and **can** contain Unicode letters, `$`, `_`, and digits (0-9), but may **not** start with a digit.*
+
+Furthermore, there are certain **keywords** (also called **reserved words**) which may ***not*** be used as identifiers. These are as follows (grouped approximately by category):
+
+| Category | Reserved Words |
+| :---: | :---: |
+| Control Structures | `break`, `case`, `default`, `do`, `else`, `for`, `if`, `return`, `switch`, `while` |
+| Classes & Objects | `delete`, `extends`, `get`, `new`, `set`, `static`, `super`, `this` |
+| Declarations | `class`, `const`, `function`, `let`, `var` |
+| Miscellaneous Operators | `in`, `instanceof`, `of`, `typeof`, `void` |
+| Modules (ES6+) | `as`, `export`, `from`, `import` |
+| Exception Handling | `catch`, `finally`, `throw`, `try` |
+| Literals* | `false`, `null`, `true` |
+| Miscellaneous Statements | `debugger`, `with` |
+| Asynchronous Programming (ES8+) | `async`, `await` |
+| Generators (ES6+) | `yield` |
+
+\* N.B. The literals `NaN` and `undefined` are not keywords, as they are not identifiers but rather are properties/values of the global `Object` (see [this discussion](https://stackoverflow.com/questions/7173773/why-nan-and-undefined-are-not-reserved-keywords-in-javascript) for more information).
+
+*(N.B. See [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords) for more details regarding JavaScript keywords.)*
 
 #### Operators and Expressions
 
@@ -342,7 +363,7 @@ const str = ‘Hello ‘ + ‘world’;
 //which is assigned to the variable isTrue
 let isTrue = true && true;
 ```
-(*N.B. While not in scope of the present discussion, it is important to be mindful of **type coercion** when combining operands of different data types into expressions using operators. See [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) for further reference.*)
+*(N.B. While not in scope of the present discussion, it is important to be mindful of **type coercion** when combining operands of different data types into expressions using operators. See [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) for further reference.)*
 
 #### Operator Precedence
 
