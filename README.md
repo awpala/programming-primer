@@ -367,7 +367,7 @@ let isTrue = true && true;
 
 #### Operator Precedence
 
-When working with operators to create arbitrarily complex expressions in JavaScript, it is important to note the **operator precedence** of a given operator, where an operator can take one, two, or three operands (values and/or expressions), correspondingly referred to as unary, binary, and ternary (respectively) operators.
+When working with operators to create arbitrarily complex expressions in JavaScript, it is important to note the **operator precedence** of a given operator, where an operator can take one, two, or three **operands** (values and/or expressions)—correspondingly referred to as unary, binary, and ternary (respectively) operators.
 
 An abbreviated table of select operators and their precedence is as follows (see [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence) for full reference):
 
@@ -390,9 +390,9 @@ An abbreviated table of select operators and their precedence is as follows (see
 
 *(N.B. The conditional operator* `?:` *is also called the **ternary** operator because it is "the" one operator which receives **three** operands.)* 
 
-The operator rules are listed for each operator with respect to its number of **operands** (where the operands `op1`, `op2`, and `op3` in general can be either values or arbitrary expressions) and **associativity** (i.e., left-to-right L → R, or right-to-left L ← R). Associativity is the order/direction in which operations are performed when two (or more) operators of equal precedence occur in a statement.
+The operator precedence rules are listed for each operator with respect to its number of **operands** (where in general the operands `op1`, `op2`, and `op3` can be either values or arbitrary expressions) and **associativity** (i.e., left-to-right L → R, or right-to-left L ← R). Associativity is the order/direction in which operations are performed when two (or more) operators of equal precedence sharing mutual operands occur in a statement.
 
-These operators can be further categorized as follows (with precedence rank indicated in parentheses; furthermore, with respect to the operands count, ^ denotes unary operators, ^^^ denotes the ternary operator, and all others are binary operators):
+These operators can be further categorized as follows:
 
 | Operation | L → R Associative Operators | L ← R Associative Operators | Result of Operation |
 | :---: | :---: | :---: | :---: |
@@ -402,6 +402,8 @@ These operators can be further categorized as follows (with precedence rank indi
 | Arithmetic | `*` (15), `/` (15), `%` (15), `+` (14), `-` (14) | `+` (17^), `-` (17^), `**` (16) | Returns a numeric value |
 | Comparison | `<` (12), `<=` (12), `>` (12), `>=` (12), `==` (11), `!=` (11), `===` (11), `!==` (11) | | Returns a Boolean value |
 | Variable Assignment | | `=` (3), `**=` (3), `*=` (3), `/=` (3), `%=` (3), `+=` (3), `-=` (3) | Assign and/or update variable's stored value |
+
+N.B. In the table above, precedence rank number is indicated in parentheses, and furthermore with respect to the operands count, the annotations ^ denotes unary operators, ^^^ denotes the ternary operator, and all others denote/imply binary operators.
 
 #### ***Aside***: Logical Operators
 
