@@ -312,7 +312,7 @@ Additionally, JavaScript provides many additional *non*-primitive data types (e.
 
 #### Variables, Identifiers, and Keywords
 
-Values in isolation are not particularly useful in solving a problem with a computer program. In order to confer *utility* onto these values, they can be stored in **variables** and used in arbitrary **expressions**.
+Values in isolation are not particularly useful in solving a problem with a computer program. In order to confer *utility* onto these values, they can be stored in **variables** and used in (arbitrarily complex) **expressions**.
 
 First, consider the simple **variable assignment** of primitive data types using the assignment operator `=`:
 ```js
