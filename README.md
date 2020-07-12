@@ -331,7 +331,7 @@ Furthermore, there are certain **keywords** (also called **reserved words**) whi
 
 | Category | Reserved Words |
 | :---: | :---: |
-| Control Structures | `break`, `case`, `default`, `do`, `else`, `for`, `if`, `return`, `switch`, `while` |
+| Control Structures | `break`, `case`, `continue`, `default`, `do`, `else`, `for`, `if`, `return`, `switch`, `while` |
 | Classes & Objects | `delete`, `extends`, `get`, `new`, `set`, `static`, `super`, `this` |
 | Declarations | `class`, `const`, `function`, `let`, `var` |
 | Miscellaneous Operators | `in`, `instanceof`, `of`, `typeof`, `void` |
