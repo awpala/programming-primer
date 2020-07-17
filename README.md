@@ -138,38 +138,39 @@ A key innovation to address this issue was the development of **assembly languag
 
 The above binary program example can be represented in [MARIE](http://computerscience.jbpub.com/ecoa/4e/Login.aspx?ref=/ecoa/4e/default.aspx) (a fictitious/academic assembly language for a hypothetical computer architecture, used for pedagogical purposes) as follows:
 ```
-		CLEAR
-		STORE INDEX
-WHILE,		LOAD STR_BASE
-		ADD INDEX
-		STORE ADDR
-		LOADI ADDR
-		SKIPCOND 400
-		JUMP DO
-		JUMP END_WHILE
-DO,		OUTPUT
-		LOAD INDEX
-		ADD ONE
-		STORE INDEX
-		JUMP WHILE
-END_WHILE,	HALT
-ONE,		DEC 1
-INDEX,		DEC 0
-ADDR,		HEX 0
-STR_BASE,	HEX 13
-STR,		DEC 72	/H
-		DEC 69	/E
-		DEC 76	/L
-		DEC 76	/L
-		DEC 79	/O
-		DEC 13	/carriage return
-		DEC 87	/W
-		DEC 79	/O
-		DEC 82	/R
-		DEC 76	/L
-		DEC 68	/D
-NULL,		DEC 0	/NULL CHAR
-
+Address		Label		Instruction
+--------------------------------------------------------------
+0				CLEAR
+1				STORE INDEX
+2		WHILE,		LOAD STR_BASE
+3				ADD INDEX
+4				STORE ADDR
+5				LOADI ADDR
+6				SKIPCOND 400
+7				JUMP DO
+8				JUMP END_WHILE
+9		DO,		OUTPUT
+A				LOAD INDEX
+B				ADD ONE
+C				STORE INDEX
+D				JUMP WHILE
+E		END_WHILE,	HALT
+F		ONE,		DEC 1
+10		INDEX,		DEC 0
+11		ADDR,		HEX 0
+12		STR_BASE,	HEX 13
+13		STR,		DEC 72	/H
+14				DEC 69	/E
+15				DEC 76	/L
+16				DEC 76	/L
+17				DEC 79	/O
+18				DEC 13	/carriage return
+19				DEC 87	/W
+1A				DEC 79	/O
+1B				DEC 82	/R
+1C				DEC 76	/L
+1D				DEC 68	/D
+1E		NULL,		DEC 0	/NULL CHAR
 ```
 
 ### C-3. Modern Era (1970s to Present)
