@@ -439,7 +439,7 @@ let a = 3 + 2 / 4;
 // 3.5 is assigned to a
 
 a = (3 + 2) / 4;
-// Operators: "(...)" (1), "+" (14), "/" (15)
+// Operators: "(...)" (21), "+" (14), "/" (15)
 // (...) increases the precedence of the expression 3 + 2, which is evaluated first to give 5
 // 5 / 4 is evaluated, giving 1.25
 // 1.25 is assigned to a
