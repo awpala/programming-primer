@@ -99,7 +99,7 @@ Further innovation in integrated-circuit manufacturing technology over the subse
 
 There was still, however, another problem: the process of “programming” these early computational devices required great skill and was highly tedious and error-prone, inasmuch as these machines were directly programmed in the “native” binary language understood by the machines. These early program were typically printed on punch cards or on tape read by the machine, which required intense labor and skill to write even trivial programs.
 
-An [example](http://www.cs.uni.edu/~fienup/cs1410f11/lectures/Supplement_MARE_AL.pdf) "simple" binary program is as follows:
+An [example](http://www.hwmath.com/dev/MarieSim//Supplement_MARE_AL.pdf) "simple" binary program is as follows:
 ```
 1010000000000000
 0010000000010000
@@ -136,7 +136,7 @@ An [example](http://www.cs.uni.edu/~fienup/cs1410f11/lectures/Supplement_MARE_AL
 
 A key innovation to address this issue was the development of **assembly languages**, starting in the late 1940s and into the subsequent decades. Assembly languages use mnemonic terms to represent the binary machine instructions and memory addresses of the computer, alleviating the need to explicitly program the computer in its native binary format.
 
-The above binary program example can be represented in [MARIE](http://computerscience.jbpub.com/ecoa/4e/Login.aspx?ref=/ecoa/4e/default.aspx) (a fictitious/academic assembly language for a hypothetical computer architecture, used for pedagogical purposes) as follows:
+The above binary program example can be represented in [MARIE](https://www.jblearning.com/catalog/productdetails/9781284123036#productInfo) (a fictitious/academic assembly language for a hypothetical computer architecture, used for pedagogical purposes) as follows:
 ```
 Address		Label		Instruction
 --------------------------------------------------------------
